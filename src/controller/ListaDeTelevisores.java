@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 import model.Televisor;
 
 public class ListaDeTelevisores {
+
     private ArrayList<Televisor> listaDeTelevisores;
     private Validador validador;
 
@@ -207,41 +208,4 @@ public class ListaDeTelevisores {
         return Boolean.FALSE;
     }
 
-    public String verificarTiempoLavadoController(String nivelDelAgua, String tipoDeLavado) {
-        if (!validador.validarConRegex(nivelDelAgua, "^(Normal|Rapido|Pesado)$", "Tipo de lavado", "Tipo de lavado es invalido(a), \ndebe ser normal, rapido o pesado")
-                || !validador.validarConRegex(tipoDeLavado, "^(Bajo|Medio|Alto)$", "Nivel de agua", "Nivel de agua es invalido(a), debe ser bajo, medio o alto")) {
-            return "Tiempo de lavado no pudo ser obtenido";
-        } else {
-            int tiempoDeLavado = 0;
-
-            if ("normal".equals(tipoDeLavado)) {
-                if (null != nivelDelAgua) {
-                    switch (nivelDelAgua) {
-                        case "bajo" ->
-                            tiempoDeLavado = 30;
-                        case "medio" ->
-                            tiempoDeLavado = 45;
-                        case "alto" ->
-                            tiempoDeLavado = 60;
-                        default -> {
-                        }
-                    }
-                }
-            }
-
-            if ("rapido".equals(tipoDeLavado)) {
-                tiempoDeLavado = 15;
-            }
-
-            if ("pesado".equals(tipoDeLavado)) {
-                if ("bajo".equals(nivelDelAgua)) {
-                    tiempoDeLavado = 70;
-                } else if ("medio".equals(nivelDelAgua) || "alto".equals(nivelDelAgua)) {
-                    tiempoDeLavado = 90;
-                }
-            }
-
-            return "El tiempo de lavado es: " + tiempoDeLavado;
-        }
-    }
 }
