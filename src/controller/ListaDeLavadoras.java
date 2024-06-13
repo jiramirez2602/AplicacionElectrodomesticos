@@ -10,7 +10,7 @@ public class ListaDeLavadoras {
     private Validador validador;
 
     public ListaDeLavadoras() {
-        ArrayList<Lavadora> listaDeLavadoras = new ArrayList<>();
+        listaDeLavadoras = new ArrayList<>();
         validador = new Validador();
     }
 
