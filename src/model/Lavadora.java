@@ -9,6 +9,7 @@ public class Lavadora extends Electrodomestico {
 
     //Constructor por defecto
     public Lavadora() {
+        super();
         this.carga = 5;
     }
 
@@ -69,6 +70,8 @@ public class Lavadora extends Electrodomestico {
     //de poseer un precio final para la venta en una tienda de articulos
     //para el hogar.Por lo tanto las clases Lavadora y Televisor son sustituibles
     //con la clase padre que es la clase Electrodomestico por el metodo precioFinal.
-
+    public void mostrarDatos() {
+        System.out.println("Lavadora \nPrecio Base: $" + getPrecioBase() + "\nColor: " + getColor() + "\nConsumo: " + getConsumoEnergetico() + "\nPeso: " + getPeso() + "kg \nCarga: " + getCarga() + "kg \nPrecio final: $" + precioFinal() + "\n");
+    }
 
 }

@@ -5,6 +5,7 @@ public class Televisor extends Electrodomestico{
     public boolean TDT;
 
     public Televisor() {
+        super();
         pulgadas = 20;
         TDT = false;
     }
@@ -78,6 +79,9 @@ public class Televisor extends Electrodomestico{
             return super.getPrecioBase() + precioExtra;
         }
 
+    }
+    public void mostrarDatos() {
+        System.out.println("Televisor \nPrecio Base: $" + getPrecioBase() + "\nColor: " + getColor() + "\nConsumo: " + getConsumoEnergetico() + "\nPeso: " + getPeso() + "kg \nPulgadas: " + getPulgadas() + "\nTDT: " + isTDT() + "\nPrecio final: $" + precioFinal() + "\n");
     }
  
     //Se cumple el principio de Sustitucion de Liskov por el metodo de 
