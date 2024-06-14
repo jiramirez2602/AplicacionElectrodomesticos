@@ -192,14 +192,14 @@ public class ListaDeLavadoras {
         } else {
             int tiempoDeLavado = 0;
 
-            if ("normal".equals(tipoDeLavado)) {
-                if (null != nivelDelAgua) {
-                    switch (nivelDelAgua) {
-                        case "bajo" ->
+            if ("Normal".equals(nivelDelAgua)) {
+                if (null != tipoDeLavado) {
+                    switch (tipoDeLavado) {
+                        case "Bajo" ->
                             tiempoDeLavado = 30;
-                        case "medio" ->
+                        case "Medio" ->
                             tiempoDeLavado = 45;
-                        case "alto" ->
+                        case "Alto" ->
                             tiempoDeLavado = 60;
                         default -> {
                         }
@@ -207,14 +207,14 @@ public class ListaDeLavadoras {
                 }
             }
 
-            if ("rapido".equals(tipoDeLavado)) {
+            if ("Rapido".equals(nivelDelAgua)) {
                 tiempoDeLavado = 15;
             }
 
-            if ("pesado".equals(tipoDeLavado)) {
-                if ("bajo".equals(nivelDelAgua)) {
+            if ("Pesado".equals(nivelDelAgua)) {
+                if ("Bajo".equals(tipoDeLavado)) {
                     tiempoDeLavado = 70;
-                } else if ("medio".equals(nivelDelAgua) || "alto".equals(nivelDelAgua)) {
+                } else if ("Medio".equals(tipoDeLavado) || "Alto".equals(tipoDeLavado)) {
                     tiempoDeLavado = 90;
                 }
             }

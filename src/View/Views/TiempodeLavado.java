@@ -143,8 +143,6 @@ public class TiempodeLavado extends javax.swing.JPanel {
         String valorLavado = ComboBoxLavado.getSelectedItem().toString();
         String resultado = listaDeLavadoras.verificarTiempoLavadoController(valorAgua, valorLavado);
         JOptionPane.showMessageDialog(this, resultado, "Resultado del Tiempo de Lavado", JOptionPane.INFORMATION_MESSAGE);
- 
-
     }//GEN-LAST:event_CalcularTiempoLavadoActionPerformed
 
 
