@@ -70,7 +70,7 @@ public class TiempodeLavado extends javax.swing.JPanel {
 
         ComboBoxAgua.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Normal", "Rapido", "Pesado" }));
 
-        ComboBoxLavado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bajo ", "Medio", "Alto" }));
+        ComboBoxLavado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bajo", "Medio", "Alto" }));
 
         javax.swing.GroupLayout BackgroundTiempoLavadoLayout = new javax.swing.GroupLayout(BackgroundTiempoLavado);
         BackgroundTiempoLavado.setLayout(BackgroundTiempoLavadoLayout);
@@ -143,6 +143,7 @@ public class TiempodeLavado extends javax.swing.JPanel {
         String valorLavado = ComboBoxLavado.getSelectedItem().toString();
         String resultado = listaDeLavadoras.verificarTiempoLavadoController(valorAgua, valorLavado);
         JOptionPane.showMessageDialog(this, resultado, "Resultado del Tiempo de Lavado", JOptionPane.INFORMATION_MESSAGE);
+
     }//GEN-LAST:event_CalcularTiempoLavadoActionPerformed
 
 

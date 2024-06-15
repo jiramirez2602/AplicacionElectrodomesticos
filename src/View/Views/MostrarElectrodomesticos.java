@@ -34,7 +34,7 @@ public class MostrarElectrodomesticos extends javax.swing.JPanel {
     }
     
     private void inicializarTabla() {
-        String[] columnas = {"Tipo", "Precio Base", "Color", "Consumo", "Peso", "Especificación Extra", "Precio fianl"};
+        String[] columnas = {"Tipo", "Precio Base", "Color", "Consumo", "Peso", "Especificación Extra", "Precio final"};
         tableModel = new DefaultTableModel(columnas, 0);
         jTable1.setModel(tableModel);
     }
