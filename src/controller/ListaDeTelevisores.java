@@ -58,7 +58,7 @@ public class ListaDeTelevisores {
     public boolean crearTelevisor(String precioBase, String color, String consumoEnergetico, String peso, String pulgadas, String TDT) {
         if (!validador.validarConRegex(precioBase, "^([1-9][0-9][0-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9]|10000)$", "Precio Base", "Precio Base es invalido(a) \ndebe ser un numero de 1-10000. Ejemplo: 970")
                 || !validador.validarConRegex(peso, "^([1-2][0-9][0-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9]|3000)$", "Peso", "Peso es invalido(a), \ndebe ser un numero de 1-3000kg. Ejemplo: 20")
-                || !validador.validarConRegex(color, "^(Blanco|Negro|Azul|Rojo|Gris)$", "Color", "Color es invalido(a), \ndebe ser BLANCO, NEGRO, AZUL, ROJO o GRIS")
+//                || !validador.validarConRegex(color, "^(Blanco|Negro|Azul|Rojo|Gris)$", "Color", "Color es invalido(a), \ndebe ser BLANCO, NEGRO, AZUL, ROJO o GRIS")
                 || !validador.validarConRegex(consumoEnergetico, "^(A|B|C|D|E|F)$", "Consumo Energetico", "Consumo Energetico es invalido(a), \ndebe ser A, B, C, D, E o F")
                 || !validador.validarConRegex(pulgadas, "^([1-9][0-9]|[1-9]|100)$", "Pulgadas", "Carga es invalido(a), \ndebe ser un numero de 1-100 pulgadas. Ejemplo: 32")
                 || !validador.validarConRegex(TDT, "^(Si|No)$", "TDT", "Tipo TDT es invalido(a), \ndebe ser Si o No")) {
@@ -127,7 +127,7 @@ public class ListaDeTelevisores {
     public boolean modificarTelevisor(String id, String precioBase, String color, String consumoEnergetico, String peso, String pulgadas, String TDT) {
         if (!validador.validarConRegex(precioBase, "^([1-9][0-9][0-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9]|10000)$", "Precio Base", "Precio Base es invalido(a) \ndebe ser un numero de 1-10000. Ejemplo: 970")
                 || !validador.validarConRegex(peso, "^([1-2][0-9][0-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9]|3000)$", "Peso", "Peso es invalido(a), \ndebe ser un numero de 1-3000kg. Ejemplo: 20")
-                || !validador.validarConRegex(color, "^(Blanco|Negro|Azul|Rojo|Gris)$", "Color", "Color es invalido(a), \ndebe ser BLANCO, NEGRO, AZUL, ROJO o GRIS")
+//                || !validador.validarConRegex(color, "^(Blanco|Negro|Azul|Rojo|Gris)$", "Color", "Color es invalido(a), \ndebe ser BLANCO, NEGRO, AZUL, ROJO o GRIS")
                 || !validador.validarConRegex(consumoEnergetico, "^(A|B|C|D|E|F)$", "Consumo Energetico", "Consumo Energetico es invalido(a), \ndebe ser A, B, C, D, E o F")
                 || !validador.validarConRegex(pulgadas, "^([1-9][0-9]|[1-9]|100)$", "Pulgadas", "Carga es invalido(a), \ndebe ser un numero de 1-100 pulgadas. Ejemplo: 32")
                 || !validador.validarConRegex(TDT, "^(Si|No)$", "TDT", "Tipo TDT es invalido(a), \ndebe ser Si o No")) {
