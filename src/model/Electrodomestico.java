@@ -2,7 +2,7 @@ package model;
 
 import java.util.UUID;
 
-public abstract class Electrodomestico {
+public abstract class Electrodomestico  {
 
     protected int precioBase;
     protected String color; //blanco, negro, rojo, azul y gris
@@ -27,7 +27,7 @@ public abstract class Electrodomestico {
     //constructor con el precio y peso. El resto por defecto. 
     public Electrodomestico(int precioBase, int peso) {
         this.id = generarUUID();
-        this.color = "BLANCO";
+        this.color = "Blanco";
         this.consumoEnergetico = 'F';
         this.peso = peso;
         this.precioBase = precioBase;
