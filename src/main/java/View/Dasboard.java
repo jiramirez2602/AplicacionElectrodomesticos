@@ -18,6 +18,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 /**
@@ -34,6 +35,7 @@ public class Dasboard extends javax.swing.JFrame {
     public Dasboard() {
         Conexion.conectarFirebase();
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/logo_repara.png")).getImage());
         InitContent();
         SetDate();
         this.setLocationRelativeTo(null);
