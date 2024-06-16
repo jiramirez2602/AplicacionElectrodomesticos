@@ -5,6 +5,7 @@ import model.Lavadora;
 import controller.ListaDeLavadoras;
 import controller.ListaDeTelevisores;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
@@ -31,7 +32,6 @@ public class EliminarLavadorasLista extends javax.swing.JPanel {
         idMap = new HashMap<>();
         inicializarTabla();
         actualizarTabla(jTable1);
-        configurarBotonBorrar();
     }
     
     private void inicializarTabla() {
@@ -79,24 +79,16 @@ public class EliminarLavadorasLista extends javax.swing.JPanel {
         BackgroundMostrarLavadoras.repaint();
     }
      
-    private void configurarBotonBorrar() {
-        BorrarELavadora.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent evt) {
-                BorrarELavadoraActionPerformed(evt);
-            }
-        });
-    }
-     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         BackgroundMostrarLavadoras = new javax.swing.JPanel();
         title = new javax.swing.JLabel();
-        BorrarELavadora = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -104,18 +96,6 @@ public class EliminarLavadorasLista extends javax.swing.JPanel {
 
         title.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         title.setText("Lista de Lavadoras");
-
-        BorrarELavadora.setBackground(new java.awt.Color(18, 90, 173));
-        BorrarELavadora.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BorrarELavadora.setForeground(new java.awt.Color(255, 255, 255));
-        BorrarELavadora.setText("Borrar");
-        BorrarELavadora.setBorderPainted(false);
-        BorrarELavadora.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        BorrarELavadora.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BorrarELavadoraActionPerformed(evt);
-            }
-        });
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -130,34 +110,63 @@ public class EliminarLavadorasLista extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        jPanel1.setBackground(new java.awt.Color(18, 90, 173));
+        jPanel1.setPreferredSize(new java.awt.Dimension(78, 32));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Borrar");
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel1MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout BackgroundMostrarLavadorasLayout = new javax.swing.GroupLayout(BackgroundMostrarLavadoras);
         BackgroundMostrarLavadoras.setLayout(BackgroundMostrarLavadorasLayout);
         BackgroundMostrarLavadorasLayout.setHorizontalGroup(
             BackgroundMostrarLavadorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundMostrarLavadorasLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1004, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61))
-            .addGroup(BackgroundMostrarLavadorasLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(BackgroundMostrarLavadorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BackgroundMostrarLavadorasLayout.createSequentialGroup()
+                .addGroup(BackgroundMostrarLavadorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, BackgroundMostrarLavadorasLayout.createSequentialGroup()
                         .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(699, 699, 699))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundMostrarLavadorasLayout.createSequentialGroup()
-                        .addComponent(BorrarELavadora, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(53, 53, 53))))
+                    .addGroup(BackgroundMostrarLavadorasLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1004, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1004, Short.MAX_VALUE))
+                .addGap(61, 61, 61))
         );
         BackgroundMostrarLavadorasLayout.setVerticalGroup(
             BackgroundMostrarLavadorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BackgroundMostrarLavadorasLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
                 .addGap(64, 64, 64)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53)
-                .addComponent(BorrarELavadora)
-                .addGap(52, 52, 52))
+                .addGap(50, 50, 50)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -172,12 +181,19 @@ public class EliminarLavadorasLista extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BorrarELavadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarELavadoraActionPerformed
-        BorrarELavadora.setEnabled(false); 
+    private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
+        jPanel1.setBackground(new Color(18,77,173));
+    }//GEN-LAST:event_jLabel1MouseEntered
+
+    private void jLabel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseExited
+        jPanel1.setBackground(new Color(18,90,173));
+    }//GEN-LAST:event_jLabel1MouseExited
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         int selectedRow = jTable1.getSelectedRow();
         if (selectedRow > -1) {
             String tipo = (String) tableModel.getValueAt(selectedRow, 0);
-            String id = idMap.get(selectedRow); 
+            String id = idMap.get(selectedRow);
 
             boolean eliminado = false;
             if (tipo.equals("Lavadora")) {
@@ -192,9 +208,7 @@ public class EliminarLavadorasLista extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(this, "Seleccione un electrodoméstico para borrar", "Error", JOptionPane.ERROR_MESSAGE);
         }
-        
-        BorrarELavadora.setEnabled(true); 
-    }//GEN-LAST:event_BorrarELavadoraActionPerformed
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     public boolean eliminarLavadora(String id) {
         Lavadora lavadora = listaDeLavadoras.listarLavadora(id);
@@ -207,7 +221,8 @@ public class EliminarLavadorasLista extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BackgroundMostrarLavadoras;
-    private javax.swing.JButton BorrarELavadora;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JLabel title;
