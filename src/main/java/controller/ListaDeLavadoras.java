@@ -16,6 +16,10 @@ public class ListaDeLavadoras {
         listaDeLavadoras = new ArrayList<>();
         validador = new Validador();
     }
+    
+    public int obtenerCantidadDeLavadoras() {
+        return listaDeLavadoras.size();
+    }
 
     public ArrayList<Lavadora> getListaDeLavadoras() {
         listaDeLavadoras = LavadoraProvider.cargarInfoLavadora();

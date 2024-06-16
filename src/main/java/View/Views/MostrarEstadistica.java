@@ -6,6 +6,8 @@ package View.Views;
 
 import controller.ListaDeLavadoras;
 import controller.ListaDeTelevisores;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -25,10 +27,39 @@ public class MostrarEstadistica extends javax.swing.JPanel {
         initComponents();
         this.listaDeLavadoras = lavadora;
         this.listaDeTelevisores = tv;
-//        mostrarGrafica();
+        mostrarGrafica();
     }
     
-
+   private void mostrarGrafica(){
+        int N1 = listaDeLavadoras.obtenerCantidadDeLavadoras();
+        int N2 = listaDeTelevisores.obtenerCantidadDeTelevisores();
+        System.out.println(N1);
+        
+        DefaultCategoryDataset datos = new DefaultCategoryDataset();
+        
+        datos.setValue(N1, "Electrodomestico", "Lavadoras");
+        datos.setValue(N2, "Electrodomestico", "Televisores");
+        
+        JFreeChart grafico = ChartFactory.createBarChart(
+        "Cantiadad de Electrodomesticos",
+        "Electrodomesticos",
+        "Cantidad",
+        datos,
+        PlotOrientation.VERTICAL,
+        true,
+        true,
+        false
+        );
+        
+        ChartPanel panel = new ChartPanel(grafico);
+        panel.setMouseWheelEnabled(true);
+        panel.setPreferredSize(new Dimension(1006,558));
+        Estadistica.setLayout(new BorderLayout());
+        Estadistica.add(panel,BorderLayout.NORTH);
+        Estadistica.revalidate();
+        Estadistica.repaint();
+        
+   }
      
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -43,11 +74,11 @@ public class MostrarEstadistica extends javax.swing.JPanel {
         Estadistica.setLayout(EstadisticaLayout);
         EstadisticaLayout.setHorizontalGroup(
             EstadisticaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 982, Short.MAX_VALUE)
+            .addGap(0, 1006, Short.MAX_VALUE)
         );
         EstadisticaLayout.setVerticalGroup(
             EstadisticaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 542, Short.MAX_VALUE)
+            .addGap(0, 558, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout BackgroundEstadisticaLayout = new javax.swing.GroupLayout(BackgroundEstadistica);
@@ -55,16 +86,16 @@ public class MostrarEstadistica extends javax.swing.JPanel {
         BackgroundEstadisticaLayout.setHorizontalGroup(
             BackgroundEstadisticaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BackgroundEstadisticaLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
+                .addGap(30, 30, 30)
                 .addComponent(Estadistica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         BackgroundEstadisticaLayout.setVerticalGroup(
             BackgroundEstadisticaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BackgroundEstadisticaLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(28, 28, 28)
                 .addComponent(Estadistica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

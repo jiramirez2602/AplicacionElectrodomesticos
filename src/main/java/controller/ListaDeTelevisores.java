@@ -12,6 +12,10 @@ public class ListaDeTelevisores {
     private ArrayList<Televisor> listaDeTelevisores = new ArrayList<>();
     private Validador validador = new Validador();
     
+    public int obtenerCantidadDeTelevisores() {
+        return listaDeTelevisores.size();
+    }
+    
     public ArrayList<Televisor> getListaDeTelevisores() {
         listaDeTelevisores = TelevisorProvider.cargarInfoTelevisor();
         return listaDeTelevisores;

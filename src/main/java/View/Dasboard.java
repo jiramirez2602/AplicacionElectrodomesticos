@@ -7,6 +7,7 @@ package View;
 import View.Views.Contenido;
 import View.Views.Lavadora;
 import View.Views.MostrarElectrodomesticos;
+import View.Views.MostrarEstadistica;
 import View.Views.Televisor;
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
 import controller.ListaDeLavadoras;
@@ -78,6 +79,7 @@ public class Dasboard extends javax.swing.JFrame {
         BotonLavadora = new javax.swing.JButton();
         BotonTelevisor = new javax.swing.JButton();
         BotonMostrarElectrodomesticos = new javax.swing.JButton();
+        MostrarEstadistica = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
         PanelHorizontal = new javax.swing.JPanel();
@@ -164,6 +166,22 @@ public class Dasboard extends javax.swing.JFrame {
             }
         });
 
+        MostrarEstadistica.setBackground(new java.awt.Color(21, 101, 192));
+        MostrarEstadistica.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        MostrarEstadistica.setForeground(new java.awt.Color(255, 255, 255));
+        MostrarEstadistica.setText("Mostrar Estadistica");
+        MostrarEstadistica.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 13, 1, 1, new java.awt.Color(0, 0, 0)));
+        MostrarEstadistica.setBorderPainted(false);
+        MostrarEstadistica.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        MostrarEstadistica.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        MostrarEstadistica.setIconTextGap(13);
+        MostrarEstadistica.setInheritsPopupMenu(true);
+        MostrarEstadistica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MostrarEstadisticaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout BackgroundLabelsLayout = new javax.swing.GroupLayout(BackgroundLabels);
         BackgroundLabels.setLayout(BackgroundLabelsLayout);
         BackgroundLabelsLayout.setHorizontalGroup(
@@ -174,7 +192,8 @@ public class Dasboard extends javax.swing.JFrame {
                     .addComponent(BotonInicio, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
                     .addComponent(BotonLavadora, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
                     .addComponent(BotonTelevisor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
-                    .addComponent(BotonMostrarElectrodomesticos, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE))
+                    .addComponent(BotonMostrarElectrodomesticos, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
+                    .addComponent(MostrarEstadistica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         BackgroundLabelsLayout.setVerticalGroup(
@@ -188,6 +207,8 @@ public class Dasboard extends javax.swing.JFrame {
                 .addComponent(BotonTelevisor, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25)
                 .addComponent(BotonMostrarElectrodomesticos, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25)
+                .addComponent(MostrarEstadistica, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -384,6 +405,10 @@ public class Dasboard extends javax.swing.JFrame {
         MostrarJpanel (new MostrarElectrodomesticos(lavadoras,televisores));
     }//GEN-LAST:event_BotonMostrarElectrodomesticosActionPerformed
 
+    private void MostrarEstadisticaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MostrarEstadisticaActionPerformed
+        MostrarJpanel (new MostrarEstadistica(lavadoras,televisores));
+    }//GEN-LAST:event_MostrarEstadisticaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -407,6 +432,7 @@ public class Dasboard extends javax.swing.JFrame {
     private javax.swing.JButton BotonTelevisor;
     private javax.swing.JPanel ContenidoDash;
     private javax.swing.JLabel LabelFecha;
+    private javax.swing.JButton MostrarEstadistica;
     private javax.swing.JPanel PanelHorizontal;
     private javax.swing.JPanel PanelIzquierdo;
     private javax.swing.JLabel jLabel1;
