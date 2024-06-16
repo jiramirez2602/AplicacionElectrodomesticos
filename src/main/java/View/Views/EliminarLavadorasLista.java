@@ -210,15 +210,6 @@ public class EliminarLavadorasLista extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jLabel1MouseClicked
 
-    public boolean eliminarLavadora(String id) {
-        Lavadora lavadora = listaDeLavadoras.listarLavadora(id);
-        if (lavadora != null) {
-            listaDeLavadoras.getListaDeLavadoras().remove(lavadora);
-            return true;
-        }
-        return false;
-     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BackgroundMostrarLavadoras;
     private javax.swing.JLabel jLabel1;

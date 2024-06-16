@@ -214,14 +214,6 @@ public class EliminarTelevisoresLista extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jLabel1MouseClicked
     
-    public boolean eliminarTelevisor(String id) {
-        Televisor televisor = listaDeTelevisores.listarTelevisor(id);
-        if (televisor != null) {
-            listaDeTelevisores.getListaDeTelevisores().remove(televisor);
-            return true;
-        }
-        return false;
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BackgroundMostrarLavadoras;

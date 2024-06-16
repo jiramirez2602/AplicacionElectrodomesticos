@@ -185,8 +185,9 @@ public class MostrarElectrodomesticos extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1004, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(61, 61, 61))
             .addGroup(BackgroundMostrarElectrodomesticosLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
                 .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         BackgroundMostrarElectrodomesticosLayout.setVerticalGroup(
             BackgroundMostrarElectrodomesticosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -261,6 +262,7 @@ public class MostrarElectrodomesticos extends javax.swing.JPanel {
        
         int selectedRow = jTable1.getSelectedRow();
 
+        
         if (selectedRow > -1) {
             String id = idMap.get(selectedRow);
             String tipo = (String) jTable1.getValueAt(selectedRow, 0);
