@@ -227,23 +227,45 @@ public class MostrarElectrodomesticos extends javax.swing.JPanel {
        String[] options = {"Televisor", "Lavadora"};
        String tipo = (String) JOptionPane.showInputDialog(this, "Seleccione el tipo de electrodoméstico a crear", "Crear Electrodoméstico", JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
 
-    if (tipo != null) {
-        if (tipo.equals("Televisor")) {
-            MostrarJpanel(new CrearTelevisor(listaDeTelevisores));
-        } else if (tipo.equals("Lavadora")) {
-            MostrarJpanel(new CrearLavadora(listaDeLavadoras));
+        if (tipo != null) {
+            if (tipo.equals("Televisor")) {
+                MostrarJpanel(new CrearTelevisor(listaDeTelevisores));
+            } else if (tipo.equals("Lavadora")) {
+                MostrarJpanel(new CrearLavadora(listaDeLavadoras));
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Debe seleccionar un tipo de electrodoméstico para crear", "Error", JOptionPane.ERROR_MESSAGE);
         }
-    } else {
-        JOptionPane.showMessageDialog(this, "Debe seleccionar un tipo de electrodoméstico para crear", "Error", JOptionPane.ERROR_MESSAGE);
-    }
     }//GEN-LAST:event_CrearElectrodomesticoActionPerformed
 
     private void BorrarElectrodomesticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarElectrodomesticoActionPerformed
-        
+        int selectedRow = jTable1.getSelectedRow();
+
+        if (selectedRow > -1) {
+            String id = idMap.get(selectedRow);
+            String tipo = (String) jTable1.getValueAt(selectedRow, 0);
+
+            boolean eliminado = false;
+            if ("Lavadora".equals(tipo)) {
+                eliminado = listaDeLavadoras.eliminarLavadora(id);
+            } else if ("Televisor".equals(tipo)) {
+                eliminado = listaDeTelevisores.eliminarTelevisor(id);
+            }
+
+            if (eliminado) {
+                // Actualizar la tabla si se eliminó correctamente
+                actualizarTabla(jTable1);
+                JOptionPane.showMessageDialog(this, tipo + " eliminada correctamente", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "Error al eliminar " + tipo, "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Seleccione un electrodoméstico para eliminar", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_BorrarElectrodomesticoActionPerformed
 
     private void EditarElectrodomesticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarElectrodomesticoActionPerformed
-         int selectedRow = jTable1.getSelectedRow();
+        int selectedRow = jTable1.getSelectedRow();
         if (selectedRow > -1) {
         String tipo = (String) tableModel.getValueAt(selectedRow, 0);
         String id = idMap.get(selectedRow);
