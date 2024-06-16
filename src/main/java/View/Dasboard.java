@@ -10,6 +10,7 @@ import View.Views.MostrarElectrodomesticos;
 import View.Views.Televisor;
 import controller.ListaDeLavadoras;
 import controller.ListaDeTelevisores;
+import firebase.Conexion;
 import java.awt.BorderLayout;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,33 +21,34 @@ import javax.swing.JPanel;
  * @author derno
  */
 public class Dasboard extends javax.swing.JFrame {
-    
+
     private ListaDeLavadoras lavadoras;
     private ListaDeTelevisores televisores;
     int xMouse;
     int yMouse;
 
     public Dasboard() {
+        Conexion.conectarFirebase();
         initComponents();
         InitContent();
         this.setLocationRelativeTo(null);
         lavadoras = new ListaDeLavadoras();
         televisores = new ListaDeTelevisores();
     }
-    
-    private void InitContent(){
-    MostrarJpanel (new Contenido());
+
+    private void InitContent() {
+        MostrarJpanel(new Contenido());
     }
-    
-    private void MostrarJpanel(JPanel p){
-        p.setSize(1082,630);   
-        p.setLocation(0,0);
+
+    private void MostrarJpanel(JPanel p) {
+        p.setSize(1082, 630);
+        p.setLocation(0, 0);
         ContenidoDash.removeAll();
-        ContenidoDash.add(p,BorderLayout.CENTER);
+        ContenidoDash.add(p, BorderLayout.CENTER);
         ContenidoDash.revalidate();
         ContenidoDash.repaint();
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -343,40 +345,40 @@ public class Dasboard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotoninicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotoninicioMouseClicked
-        MostrarJpanel (new Contenido());
+        MostrarJpanel(new Contenido());
     }//GEN-LAST:event_BotoninicioMouseClicked
 
     private void BotonLavadoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonLavadoraMouseClicked
         ListaDeLavadoras Lista = new ListaDeLavadoras();
-        MostrarJpanel (new Lavadora(lavadoras));
+        MostrarJpanel(new Lavadora(lavadoras));
     }//GEN-LAST:event_BotonLavadoraMouseClicked
 
     private void MostrarElectrodomesticosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarElectrodomesticosMouseClicked
-        MostrarJpanel (new MostrarElectrodomesticos(lavadoras,televisores));
+        MostrarJpanel(new MostrarElectrodomesticos(lavadoras, televisores));
     }//GEN-LAST:event_MostrarElectrodomesticosMouseClicked
 
     private void BotoninicioMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotoninicioMouseMoved
-      
+
     }//GEN-LAST:event_BotoninicioMouseMoved
 
     private void BotonLavadoraMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonLavadoraMouseMoved
-    
+
     }//GEN-LAST:event_BotonLavadoraMouseMoved
 
     private void MostrarElectrodomesticosMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarElectrodomesticosMouseMoved
-       
+
     }//GEN-LAST:event_MostrarElectrodomesticosMouseMoved
 
     private void BotoninicioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotoninicioMouseExited
-       
+
     }//GEN-LAST:event_BotoninicioMouseExited
 
     private void BotonLavadoraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonLavadoraMouseExited
-     
+
     }//GEN-LAST:event_BotonLavadoraMouseExited
 
     private void MostrarElectrodomesticosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarElectrodomesticosMouseExited
-     
+
     }//GEN-LAST:event_MostrarElectrodomesticosMouseExited
 
     private void BotonTelevisor1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonTelevisor1MouseMoved
@@ -384,7 +386,7 @@ public class Dasboard extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonTelevisor1MouseMoved
 
     private void BotonTelevisor1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonTelevisor1MouseClicked
-          MostrarJpanel (new Televisor(televisores));
+        MostrarJpanel(new Televisor(televisores));
     }//GEN-LAST:event_BotonTelevisor1MouseClicked
 
     private void BotonTelevisor1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonTelevisor1MouseExited
@@ -396,14 +398,14 @@ public class Dasboard extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jPanel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MousePressed
-        xMouse=evt.getX();
-        yMouse=evt.getY();
+        xMouse = evt.getX();
+        yMouse = evt.getY();
     }//GEN-LAST:event_jPanel2MousePressed
 
     private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseDragged
-        int x=evt.getXOnScreen();
-        int y=evt.getYOnScreen();
-        this.setLocation(x-xMouse,y-yMouse);
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_jPanel2MouseDragged
 
     /**
