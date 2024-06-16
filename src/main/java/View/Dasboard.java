@@ -95,7 +95,7 @@ public class Dasboard extends javax.swing.JFrame {
         PanelIzquierdo.setBackground(new java.awt.Color(21, 101, 192));
         PanelIzquierdo.setPreferredSize(new java.awt.Dimension(270, 768));
 
-        BackgroundLabels.setBackground(new java.awt.Color(51, 153, 255));
+        BackgroundLabels.setBackground(new java.awt.Color(21, 101, 192));
 
         BotonInicio.setBackground(new java.awt.Color(21, 101, 192));
         BotonInicio.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -149,7 +149,7 @@ public class Dasboard extends javax.swing.JFrame {
         BotonMostrarElectrodomesticos.setBackground(new java.awt.Color(21, 101, 192));
         BotonMostrarElectrodomesticos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BotonMostrarElectrodomesticos.setForeground(new java.awt.Color(255, 255, 255));
-        BotonMostrarElectrodomesticos.setText("Mostrar Electrodomesticos");
+        BotonMostrarElectrodomesticos.setText("Mostrar Electrodomésticos");
         BotonMostrarElectrodomesticos.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 13, 1, 1, new java.awt.Color(0, 0, 0)));
         BotonMostrarElectrodomesticos.setBorderPainted(false);
         BotonMostrarElectrodomesticos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -216,7 +216,7 @@ public class Dasboard extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(93, 93, 93)
+                .addGap(48, 48, 48)
                 .addComponent(BackgroundLabels, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
