@@ -42,73 +42,57 @@ public class Televisor extends javax.swing.JPanel {
 
         BackgroundTelevisor = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        EliminarTelevisor = new javax.swing.JLabel();
-        CrearTelevisor = new javax.swing.JLabel();
-        ModificarTelevisor = new javax.swing.JLabel();
+        CrearTelevisor = new javax.swing.JButton();
+        ModificarTelevisor = new javax.swing.JButton();
+        Eliminartelevisor = new javax.swing.JButton();
 
         BackgroundTelevisor.setBackground(new java.awt.Color(255, 255, 255));
         BackgroundTelevisor.setPreferredSize(new java.awt.Dimension(1082, 630));
 
         jPanel2.setBackground(new java.awt.Color(21, 101, 192));
 
-        EliminarTelevisor.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        EliminarTelevisor.setForeground(new java.awt.Color(255, 255, 255));
-        EliminarTelevisor.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        EliminarTelevisor.setText("Eliminar Televisor");
-        EliminarTelevisor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        EliminarTelevisor.setIconTextGap(35);
-        EliminarTelevisor.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                EliminarTelevisorMouseMoved(evt);
-            }
-        });
-        EliminarTelevisor.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                EliminarTelevisorMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                EliminarTelevisorMouseExited(evt);
-            }
-        });
-
-        CrearTelevisor.setBackground(new java.awt.Color(255, 255, 255));
-        CrearTelevisor.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        CrearTelevisor.setBackground(new java.awt.Color(21, 101, 192));
+        CrearTelevisor.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         CrearTelevisor.setForeground(new java.awt.Color(255, 255, 255));
-        CrearTelevisor.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CrearTelevisor.setText("Crear Televisor");
-        CrearTelevisor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        CrearTelevisor.setIconTextGap(35);
-        CrearTelevisor.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                CrearTelevisorMouseMoved(evt);
-            }
-        });
-        CrearTelevisor.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CrearTelevisorMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                CrearTelevisorMouseExited(evt);
+        CrearTelevisor.setText("Crear televisor");
+        CrearTelevisor.setBorder(null);
+        CrearTelevisor.setBorderPainted(false);
+        CrearTelevisor.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        CrearTelevisor.setIconTextGap(13);
+        CrearTelevisor.setInheritsPopupMenu(true);
+        CrearTelevisor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CrearTelevisorActionPerformed(evt);
             }
         });
 
-        ModificarTelevisor.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        ModificarTelevisor.setBackground(new java.awt.Color(21, 101, 192));
+        ModificarTelevisor.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         ModificarTelevisor.setForeground(new java.awt.Color(255, 255, 255));
-        ModificarTelevisor.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ModificarTelevisor.setText("Modificar Televisor");
-        ModificarTelevisor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ModificarTelevisor.setIconTextGap(35);
-        ModificarTelevisor.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                ModificarTelevisorMouseMoved(evt);
+        ModificarTelevisor.setText("Modificar televisor");
+        ModificarTelevisor.setBorder(null);
+        ModificarTelevisor.setBorderPainted(false);
+        ModificarTelevisor.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        ModificarTelevisor.setIconTextGap(13);
+        ModificarTelevisor.setInheritsPopupMenu(true);
+        ModificarTelevisor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificarTelevisorActionPerformed(evt);
             }
         });
-        ModificarTelevisor.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ModificarTelevisorMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                ModificarTelevisorMouseExited(evt);
+
+        Eliminartelevisor.setBackground(new java.awt.Color(21, 101, 192));
+        Eliminartelevisor.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Eliminartelevisor.setForeground(new java.awt.Color(255, 255, 255));
+        Eliminartelevisor.setText("Eliminar televisor");
+        Eliminartelevisor.setBorder(null);
+        Eliminartelevisor.setBorderPainted(false);
+        Eliminartelevisor.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Eliminartelevisor.setIconTextGap(13);
+        Eliminartelevisor.setInheritsPopupMenu(true);
+        Eliminartelevisor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminartelevisorActionPerformed(evt);
             }
         });
 
@@ -119,21 +103,21 @@ public class Televisor extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CrearTelevisor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(CrearTelevisor, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
                     .addComponent(ModificarTelevisor, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
-                    .addComponent(EliminarTelevisor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Eliminartelevisor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(CrearTelevisor, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(ModificarTelevisor, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(EliminarTelevisor, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(CrearTelevisor, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(ModificarTelevisor, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Eliminartelevisor, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout BackgroundTelevisorLayout = new javax.swing.GroupLayout(BackgroundTelevisor);
@@ -141,16 +125,16 @@ public class Televisor extends javax.swing.JPanel {
         BackgroundTelevisorLayout.setHorizontalGroup(
             BackgroundTelevisorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BackgroundTelevisorLayout.createSequentialGroup()
-                .addGap(166, 166, 166)
+                .addGap(196, 196, 196)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(759, Short.MAX_VALUE))
+                .addContainerGap(729, Short.MAX_VALUE))
         );
         BackgroundTelevisorLayout.setVerticalGroup(
             BackgroundTelevisorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundTelevisorLayout.createSequentialGroup()
-                .addContainerGap(92, Short.MAX_VALUE)
+            .addGroup(BackgroundTelevisorLayout.createSequentialGroup()
+                .addGap(185, 185, 185)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(82, 82, 82))
+                .addContainerGap(227, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -165,48 +149,24 @@ public class Televisor extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void EliminarTelevisorMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarTelevisorMouseMoved
-
-    }//GEN-LAST:event_EliminarTelevisorMouseMoved
-
-    private void EliminarTelevisorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarTelevisorMouseClicked
-        MostrarJpanel (new EliminarTelevisoresLista(televisores));
-    }//GEN-LAST:event_EliminarTelevisorMouseClicked
-
-    private void EliminarTelevisorMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarTelevisorMouseExited
-
-    }//GEN-LAST:event_EliminarTelevisorMouseExited
-
-    private void CrearTelevisorMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearTelevisorMouseMoved
-
-    }//GEN-LAST:event_CrearTelevisorMouseMoved
-
-    private void CrearTelevisorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearTelevisorMouseClicked
+    private void CrearTelevisorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearTelevisorActionPerformed
        MostrarJpanel (new CrearTelevisor(televisores));
-    }//GEN-LAST:event_CrearTelevisorMouseClicked
+    }//GEN-LAST:event_CrearTelevisorActionPerformed
 
-    private void CrearTelevisorMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearTelevisorMouseExited
+    private void ModificarTelevisorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarTelevisorActionPerformed
+        MostrarJpanel (new ModificarTelevisoresLista(televisores));
+    }//GEN-LAST:event_ModificarTelevisorActionPerformed
 
-    }//GEN-LAST:event_CrearTelevisorMouseExited
-
-    private void ModificarTelevisorMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarTelevisorMouseMoved
-
-    }//GEN-LAST:event_ModificarTelevisorMouseMoved
-
-    private void ModificarTelevisorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarTelevisorMouseClicked
-         MostrarJpanel (new ModificarTelevisoresLista(televisores));
-    }//GEN-LAST:event_ModificarTelevisorMouseClicked
-
-    private void ModificarTelevisorMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarTelevisorMouseExited
-
-    }//GEN-LAST:event_ModificarTelevisorMouseExited
+    private void EliminartelevisorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminartelevisorActionPerformed
+        MostrarJpanel (new EliminarTelevisoresLista(televisores));
+    }//GEN-LAST:event_EliminartelevisorActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BackgroundTelevisor;
-    private javax.swing.JLabel CrearTelevisor;
-    private javax.swing.JLabel EliminarTelevisor;
-    private javax.swing.JLabel ModificarTelevisor;
+    private javax.swing.JButton CrearTelevisor;
+    private javax.swing.JButton Eliminartelevisor;
+    private javax.swing.JButton ModificarTelevisor;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

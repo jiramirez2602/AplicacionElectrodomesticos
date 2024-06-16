@@ -43,73 +43,57 @@ public class CrearLavadora extends javax.swing.JPanel {
 
         BackgroundCrearLavadora = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        CrearLavadoraDefecto = new javax.swing.JLabel();
-        CrearLavadoraTeclado = new javax.swing.JLabel();
-        CrearLavadoraPesoPrecio = new javax.swing.JLabel();
+        CrearLavadoraTeclado = new javax.swing.JButton();
+        CrearLavadoraPrecioPeso = new javax.swing.JButton();
+        CrearLavadoraDefecto = new javax.swing.JButton();
 
         BackgroundCrearLavadora.setBackground(new java.awt.Color(255, 255, 255));
         BackgroundCrearLavadora.setPreferredSize(new java.awt.Dimension(1082, 630));
 
         jPanel2.setBackground(new java.awt.Color(21, 101, 192));
 
-        CrearLavadoraDefecto.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        CrearLavadoraDefecto.setForeground(new java.awt.Color(255, 255, 255));
-        CrearLavadoraDefecto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CrearLavadoraDefecto.setText("Crear por defecto");
-        CrearLavadoraDefecto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        CrearLavadoraDefecto.setIconTextGap(35);
-        CrearLavadoraDefecto.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                CrearLavadoraDefectoMouseMoved(evt);
-            }
-        });
-        CrearLavadoraDefecto.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CrearLavadoraDefectoMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                CrearLavadoraDefectoMouseExited(evt);
-            }
-        });
-
-        CrearLavadoraTeclado.setBackground(new java.awt.Color(255, 255, 255));
-        CrearLavadoraTeclado.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        CrearLavadoraTeclado.setBackground(new java.awt.Color(21, 101, 192));
+        CrearLavadoraTeclado.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         CrearLavadoraTeclado.setForeground(new java.awt.Color(255, 255, 255));
-        CrearLavadoraTeclado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         CrearLavadoraTeclado.setText("Crear por teclado");
-        CrearLavadoraTeclado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        CrearLavadoraTeclado.setIconTextGap(35);
-        CrearLavadoraTeclado.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                CrearLavadoraTecladoMouseMoved(evt);
-            }
-        });
-        CrearLavadoraTeclado.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CrearLavadoraTecladoMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                CrearLavadoraTecladoMouseExited(evt);
+        CrearLavadoraTeclado.setBorder(null);
+        CrearLavadoraTeclado.setBorderPainted(false);
+        CrearLavadoraTeclado.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        CrearLavadoraTeclado.setIconTextGap(13);
+        CrearLavadoraTeclado.setInheritsPopupMenu(true);
+        CrearLavadoraTeclado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CrearLavadoraTecladoActionPerformed(evt);
             }
         });
 
-        CrearLavadoraPesoPrecio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        CrearLavadoraPesoPrecio.setForeground(new java.awt.Color(255, 255, 255));
-        CrearLavadoraPesoPrecio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CrearLavadoraPesoPrecio.setText("Crear con precio y peso");
-        CrearLavadoraPesoPrecio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        CrearLavadoraPesoPrecio.setIconTextGap(35);
-        CrearLavadoraPesoPrecio.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                CrearLavadoraPesoPrecioMouseMoved(evt);
+        CrearLavadoraPrecioPeso.setBackground(new java.awt.Color(21, 101, 192));
+        CrearLavadoraPrecioPeso.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        CrearLavadoraPrecioPeso.setForeground(new java.awt.Color(255, 255, 255));
+        CrearLavadoraPrecioPeso.setText("Crear con precio y peso");
+        CrearLavadoraPrecioPeso.setBorder(null);
+        CrearLavadoraPrecioPeso.setBorderPainted(false);
+        CrearLavadoraPrecioPeso.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        CrearLavadoraPrecioPeso.setIconTextGap(13);
+        CrearLavadoraPrecioPeso.setInheritsPopupMenu(true);
+        CrearLavadoraPrecioPeso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CrearLavadoraPrecioPesoActionPerformed(evt);
             }
         });
-        CrearLavadoraPesoPrecio.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CrearLavadoraPesoPrecioMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                CrearLavadoraPesoPrecioMouseExited(evt);
+
+        CrearLavadoraDefecto.setBackground(new java.awt.Color(21, 101, 192));
+        CrearLavadoraDefecto.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        CrearLavadoraDefecto.setForeground(new java.awt.Color(255, 255, 255));
+        CrearLavadoraDefecto.setText("Crear por defecto");
+        CrearLavadoraDefecto.setBorder(null);
+        CrearLavadoraDefecto.setBorderPainted(false);
+        CrearLavadoraDefecto.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        CrearLavadoraDefecto.setIconTextGap(13);
+        CrearLavadoraDefecto.setInheritsPopupMenu(true);
+        CrearLavadoraDefecto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CrearLavadoraDefectoActionPerformed(evt);
             }
         });
 
@@ -120,21 +104,21 @@ public class CrearLavadora extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CrearLavadoraTeclado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(CrearLavadoraPesoPrecio, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
-                    .addComponent(CrearLavadoraDefecto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(CrearLavadoraTeclado, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
+                    .addComponent(CrearLavadoraPrecioPeso, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
+                    .addComponent(CrearLavadoraDefecto, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(CrearLavadoraTeclado, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(CrearLavadoraPesoPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(CrearLavadoraDefecto, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(CrearLavadoraTeclado, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25)
+                .addComponent(CrearLavadoraPrecioPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25)
+                .addComponent(CrearLavadoraDefecto, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout BackgroundCrearLavadoraLayout = new javax.swing.GroupLayout(BackgroundCrearLavadora);
@@ -142,16 +126,16 @@ public class CrearLavadora extends javax.swing.JPanel {
         BackgroundCrearLavadoraLayout.setHorizontalGroup(
             BackgroundCrearLavadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BackgroundCrearLavadoraLayout.createSequentialGroup()
-                .addGap(166, 166, 166)
+                .addGap(215, 215, 215)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(759, Short.MAX_VALUE))
+                .addContainerGap(710, Short.MAX_VALUE))
         );
         BackgroundCrearLavadoraLayout.setVerticalGroup(
             BackgroundCrearLavadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundCrearLavadoraLayout.createSequentialGroup()
-                .addContainerGap(92, Short.MAX_VALUE)
+            .addGroup(BackgroundCrearLavadoraLayout.createSequentialGroup()
+                .addGap(191, 191, 191)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(82, 82, 82))
+                .addContainerGap(207, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -166,52 +150,27 @@ public class CrearLavadora extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CrearLavadoraDefectoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearLavadoraDefectoMouseMoved
+    private void CrearLavadoraTecladoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearLavadoraTecladoActionPerformed
+        MostrarJpanel (new LavadoraTeclado(lavadoras));
+    }//GEN-LAST:event_CrearLavadoraTecladoActionPerformed
 
-    }//GEN-LAST:event_CrearLavadoraDefectoMouseMoved
+    private void CrearLavadoraPrecioPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearLavadoraPrecioPesoActionPerformed
+        MostrarJpanel (new LavadoraPrecioPeso(lavadoras));
+    }//GEN-LAST:event_CrearLavadoraPrecioPesoActionPerformed
 
-    private void CrearLavadoraDefectoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearLavadoraDefectoMouseClicked
+    private void CrearLavadoraDefectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearLavadoraDefectoActionPerformed
         boolean resultado = lavadoras.crearLavadora();
         if (resultado) {
             JOptionPane.showMessageDialog(null, "Lavadora registrada con éxito.", "Registro Exitoso", JOptionPane.INFORMATION_MESSAGE);
         }
-        
-    }//GEN-LAST:event_CrearLavadoraDefectoMouseClicked
-
-    private void CrearLavadoraDefectoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearLavadoraDefectoMouseExited
-
-    }//GEN-LAST:event_CrearLavadoraDefectoMouseExited
-
-    private void CrearLavadoraTecladoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearLavadoraTecladoMouseMoved
-
-    }//GEN-LAST:event_CrearLavadoraTecladoMouseMoved
-
-    private void CrearLavadoraTecladoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearLavadoraTecladoMouseClicked
-        MostrarJpanel (new LavadoraTeclado(lavadoras));
-    }//GEN-LAST:event_CrearLavadoraTecladoMouseClicked
-
-    private void CrearLavadoraTecladoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearLavadoraTecladoMouseExited
-
-    }//GEN-LAST:event_CrearLavadoraTecladoMouseExited
-
-    private void CrearLavadoraPesoPrecioMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearLavadoraPesoPrecioMouseMoved
-
-    }//GEN-LAST:event_CrearLavadoraPesoPrecioMouseMoved
-
-    private void CrearLavadoraPesoPrecioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearLavadoraPesoPrecioMouseClicked
-          MostrarJpanel (new LavadoraPrecioPeso(lavadoras));
-    }//GEN-LAST:event_CrearLavadoraPesoPrecioMouseClicked
-
-    private void CrearLavadoraPesoPrecioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearLavadoraPesoPrecioMouseExited
-
-    }//GEN-LAST:event_CrearLavadoraPesoPrecioMouseExited
+    }//GEN-LAST:event_CrearLavadoraDefectoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BackgroundCrearLavadora;
-    private javax.swing.JLabel CrearLavadoraDefecto;
-    private javax.swing.JLabel CrearLavadoraPesoPrecio;
-    private javax.swing.JLabel CrearLavadoraTeclado;
+    private javax.swing.JButton CrearLavadoraDefecto;
+    private javax.swing.JButton CrearLavadoraPrecioPeso;
+    private javax.swing.JButton CrearLavadoraTeclado;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

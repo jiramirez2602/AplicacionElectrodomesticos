@@ -8,12 +8,16 @@ import View.Views.Contenido;
 import View.Views.Lavadora;
 import View.Views.MostrarElectrodomesticos;
 import View.Views.Televisor;
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
 import controller.ListaDeLavadoras;
 import controller.ListaDeTelevisores;
 import firebase.Conexion;
 import java.awt.BorderLayout;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import javax.swing.JPanel;
 
 /**
@@ -39,7 +43,13 @@ public class Dasboard extends javax.swing.JFrame {
     private void InitContent() {
         MostrarJpanel(new Contenido());
     }
-
+    
+    private void SetDate() {
+        LocalDate now = LocalDate.now();
+        Locale spanishLocale = new Locale("es", "ES");
+        LabelFecha.setText(now.format(DateTimeFormatter.ofPattern("'Hoy es' EEEE dd 'de' MMMM 'de' yyyy", spanishLocale)));
+    }
+    
     private void MostrarJpanel(JPanel p) {
         p.setSize(1082, 630);
         p.setLocation(0, 0);
@@ -61,16 +71,17 @@ public class Dasboard extends javax.swing.JFrame {
         Background = new javax.swing.JPanel();
         PanelIzquierdo = new javax.swing.JPanel();
         BackgroundLabels = new javax.swing.JPanel();
-        Botoninicio = new javax.swing.JLabel();
-        BotonLavadora = new javax.swing.JLabel();
-        MostrarElectrodomesticos = new javax.swing.JLabel();
-        BotonTelevisor1 = new javax.swing.JLabel();
+        BotonInicio = new javax.swing.JButton();
+        BotonLavadora = new javax.swing.JButton();
+        BotonTelevisor = new javax.swing.JButton();
+        BotonMostrarElectrodomesticos = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
         PanelHorizontal = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        LabelFecha = new javax.swing.JLabel();
         ContenidoDash = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -85,88 +96,68 @@ public class Dasboard extends javax.swing.JFrame {
 
         BackgroundLabels.setBackground(new java.awt.Color(51, 153, 255));
 
-        Botoninicio.setBackground(new java.awt.Color(255, 255, 255));
-        Botoninicio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Botoninicio.setForeground(new java.awt.Color(255, 255, 255));
-        Botoninicio.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        Botoninicio.setText("Inicio");
-        Botoninicio.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 20, 1, 1, new java.awt.Color(51, 153, 255)));
-        Botoninicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Botoninicio.setIconTextGap(35);
-        Botoninicio.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                BotoninicioMouseMoved(evt);
-            }
-        });
-        Botoninicio.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BotoninicioMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                BotoninicioMouseExited(evt);
+        BotonInicio.setBackground(new java.awt.Color(21, 101, 192));
+        BotonInicio.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BotonInicio.setForeground(new java.awt.Color(255, 255, 255));
+        BotonInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/home-outline.png"))); // NOI18N
+        BotonInicio.setText("Principal");
+        BotonInicio.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 13, 1, 1, new java.awt.Color(0, 0, 0)));
+        BotonInicio.setBorderPainted(false);
+        BotonInicio.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BotonInicio.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        BotonInicio.setIconTextGap(13);
+        BotonInicio.setInheritsPopupMenu(true);
+        BotonInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonInicioActionPerformed(evt);
             }
         });
 
-        BotonLavadora.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        BotonLavadora.setBackground(new java.awt.Color(21, 101, 192));
+        BotonLavadora.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BotonLavadora.setForeground(new java.awt.Color(255, 255, 255));
-        BotonLavadora.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         BotonLavadora.setText("Lavadora");
-        BotonLavadora.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 20, 1, 1, new java.awt.Color(51, 153, 255)));
-        BotonLavadora.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BotonLavadora.setIconTextGap(35);
-        BotonLavadora.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                BotonLavadoraMouseMoved(evt);
-            }
-        });
-        BotonLavadora.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BotonLavadoraMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                BotonLavadoraMouseExited(evt);
+        BotonLavadora.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 13, 1, 1, new java.awt.Color(0, 0, 0)));
+        BotonLavadora.setBorderPainted(false);
+        BotonLavadora.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BotonLavadora.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        BotonLavadora.setIconTextGap(13);
+        BotonLavadora.setInheritsPopupMenu(true);
+        BotonLavadora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonLavadoraActionPerformed(evt);
             }
         });
 
-        MostrarElectrodomesticos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        MostrarElectrodomesticos.setForeground(new java.awt.Color(255, 255, 255));
-        MostrarElectrodomesticos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        MostrarElectrodomesticos.setText("Mostrar Electrodomesticos");
-        MostrarElectrodomesticos.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 20, 1, 1, new java.awt.Color(51, 153, 255)));
-        MostrarElectrodomesticos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        MostrarElectrodomesticos.setIconTextGap(35);
-        MostrarElectrodomesticos.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                MostrarElectrodomesticosMouseMoved(evt);
-            }
-        });
-        MostrarElectrodomesticos.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MostrarElectrodomesticosMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                MostrarElectrodomesticosMouseExited(evt);
+        BotonTelevisor.setBackground(new java.awt.Color(21, 101, 192));
+        BotonTelevisor.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BotonTelevisor.setForeground(new java.awt.Color(255, 255, 255));
+        BotonTelevisor.setText("Televisor");
+        BotonTelevisor.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 13, 1, 1, new java.awt.Color(0, 0, 0)));
+        BotonTelevisor.setBorderPainted(false);
+        BotonTelevisor.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BotonTelevisor.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        BotonTelevisor.setIconTextGap(13);
+        BotonTelevisor.setInheritsPopupMenu(true);
+        BotonTelevisor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonTelevisorActionPerformed(evt);
             }
         });
 
-        BotonTelevisor1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BotonTelevisor1.setForeground(new java.awt.Color(255, 255, 255));
-        BotonTelevisor1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        BotonTelevisor1.setText("Televisor");
-        BotonTelevisor1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 20, 1, 1, new java.awt.Color(51, 153, 255)));
-        BotonTelevisor1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BotonTelevisor1.setIconTextGap(35);
-        BotonTelevisor1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                BotonTelevisor1MouseMoved(evt);
-            }
-        });
-        BotonTelevisor1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BotonTelevisor1MouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                BotonTelevisor1MouseExited(evt);
+        BotonMostrarElectrodomesticos.setBackground(new java.awt.Color(21, 101, 192));
+        BotonMostrarElectrodomesticos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BotonMostrarElectrodomesticos.setForeground(new java.awt.Color(255, 255, 255));
+        BotonMostrarElectrodomesticos.setText("Mostrar Electrodomesticos");
+        BotonMostrarElectrodomesticos.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 13, 1, 1, new java.awt.Color(0, 0, 0)));
+        BotonMostrarElectrodomesticos.setBorderPainted(false);
+        BotonMostrarElectrodomesticos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BotonMostrarElectrodomesticos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        BotonMostrarElectrodomesticos.setIconTextGap(13);
+        BotonMostrarElectrodomesticos.setInheritsPopupMenu(true);
+        BotonMostrarElectrodomesticos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonMostrarElectrodomesticosActionPerformed(evt);
             }
         });
 
@@ -177,24 +168,24 @@ public class Dasboard extends javax.swing.JFrame {
             .addGroup(BackgroundLabelsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(BackgroundLabelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Botoninicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BotonLavadora, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(MostrarElectrodomesticos, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
-                    .addComponent(BotonTelevisor1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(BotonInicio, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
+                    .addComponent(BotonLavadora, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
+                    .addComponent(BotonTelevisor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
+                    .addComponent(BotonMostrarElectrodomesticos, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE))
                 .addContainerGap())
         );
         BackgroundLabelsLayout.setVerticalGroup(
             BackgroundLabelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BackgroundLabelsLayout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(Botoninicio, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(BotonLavadora, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(BotonTelevisor1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                .addComponent(MostrarElectrodomesticos, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap()
+                .addComponent(BotonInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25)
+                .addComponent(BotonLavadora, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25)
+                .addComponent(BotonTelevisor, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25)
+                .addComponent(BotonMostrarElectrodomesticos, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jSeparator1.setPreferredSize(new java.awt.Dimension(50, 5));
@@ -215,7 +206,7 @@ public class Dasboard extends javax.swing.JFrame {
                         .addGap(17, 17, 17)
                         .addComponent(jLabel1))
                     .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         PanelIzquierdoLayout.setVerticalGroup(
             PanelIzquierdoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -276,6 +267,8 @@ public class Dasboard extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
+        LabelFecha.setText("Hoy es {dayname} {day} de {month} de {year}");
+
         javax.swing.GroupLayout PanelHorizontalLayout = new javax.swing.GroupLayout(PanelHorizontal);
         PanelHorizontal.setLayout(PanelHorizontalLayout);
         PanelHorizontalLayout.setHorizontalGroup(
@@ -284,6 +277,11 @@ public class Dasboard extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(PanelHorizontalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PanelHorizontalLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(LabelFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 1043, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(51, Short.MAX_VALUE)))
         );
         PanelHorizontalLayout.setVerticalGroup(
             PanelHorizontalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -292,6 +290,11 @@ public class Dasboard extends javax.swing.JFrame {
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 96, Short.MAX_VALUE))
+            .addGroup(PanelHorizontalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PanelHorizontalLayout.createSequentialGroup()
+                    .addGap(52, 52, 52)
+                    .addComponent(LabelFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(53, Short.MAX_VALUE)))
         );
 
         ContenidoDash.setBackground(new java.awt.Color(255, 255, 255));
@@ -344,55 +347,6 @@ public class Dasboard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BotoninicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotoninicioMouseClicked
-        MostrarJpanel(new Contenido());
-    }//GEN-LAST:event_BotoninicioMouseClicked
-
-    private void BotonLavadoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonLavadoraMouseClicked
-        ListaDeLavadoras Lista = new ListaDeLavadoras();
-        MostrarJpanel(new Lavadora(lavadoras));
-    }//GEN-LAST:event_BotonLavadoraMouseClicked
-
-    private void MostrarElectrodomesticosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarElectrodomesticosMouseClicked
-        MostrarJpanel(new MostrarElectrodomesticos(lavadoras, televisores));
-    }//GEN-LAST:event_MostrarElectrodomesticosMouseClicked
-
-    private void BotoninicioMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotoninicioMouseMoved
-
-    }//GEN-LAST:event_BotoninicioMouseMoved
-
-    private void BotonLavadoraMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonLavadoraMouseMoved
-
-    }//GEN-LAST:event_BotonLavadoraMouseMoved
-
-    private void MostrarElectrodomesticosMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarElectrodomesticosMouseMoved
-
-    }//GEN-LAST:event_MostrarElectrodomesticosMouseMoved
-
-    private void BotoninicioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotoninicioMouseExited
-
-    }//GEN-LAST:event_BotoninicioMouseExited
-
-    private void BotonLavadoraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonLavadoraMouseExited
-
-    }//GEN-LAST:event_BotonLavadoraMouseExited
-
-    private void MostrarElectrodomesticosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarElectrodomesticosMouseExited
-
-    }//GEN-LAST:event_MostrarElectrodomesticosMouseExited
-
-    private void BotonTelevisor1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonTelevisor1MouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonTelevisor1MouseMoved
-
-    private void BotonTelevisor1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonTelevisor1MouseClicked
-        MostrarJpanel(new Televisor(televisores));
-    }//GEN-LAST:event_BotonTelevisor1MouseClicked
-
-    private void BotonTelevisor1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonTelevisor1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonTelevisor1MouseExited
-
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         System.exit(0);
     }//GEN-LAST:event_jLabel2MouseClicked
@@ -408,32 +362,28 @@ public class Dasboard extends javax.swing.JFrame {
         this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_jPanel2MouseDragged
 
+    private void BotonInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonInicioActionPerformed
+        MostrarJpanel (new Contenido());
+    }//GEN-LAST:event_BotonInicioActionPerformed
+
+    private void BotonLavadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonLavadoraActionPerformed
+        ListaDeLavadoras Lista = new ListaDeLavadoras();
+        MostrarJpanel (new Lavadora(lavadoras));
+    }//GEN-LAST:event_BotonLavadoraActionPerformed
+
+    private void BotonTelevisorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonTelevisorActionPerformed
+        MostrarJpanel (new Televisor(televisores));
+    }//GEN-LAST:event_BotonTelevisorActionPerformed
+
+    private void BotonMostrarElectrodomesticosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonMostrarElectrodomesticosActionPerformed
+        MostrarJpanel (new MostrarElectrodomesticos(lavadoras,televisores));
+    }//GEN-LAST:event_BotonMostrarElectrodomesticosActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Dasboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Dasboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Dasboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Dasboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+        FlatMaterialLighterIJTheme.setup();
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -446,11 +396,12 @@ public class Dasboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
     private javax.swing.JPanel BackgroundLabels;
-    private javax.swing.JLabel BotonLavadora;
-    private javax.swing.JLabel BotonTelevisor1;
-    private javax.swing.JLabel Botoninicio;
+    private javax.swing.JButton BotonInicio;
+    private javax.swing.JButton BotonLavadora;
+    private javax.swing.JButton BotonMostrarElectrodomesticos;
+    private javax.swing.JButton BotonTelevisor;
     private javax.swing.JPanel ContenidoDash;
-    private javax.swing.JLabel MostrarElectrodomesticos;
+    private javax.swing.JLabel LabelFecha;
     private javax.swing.JPanel PanelHorizontal;
     private javax.swing.JPanel PanelIzquierdo;
     private javax.swing.JLabel jLabel1;

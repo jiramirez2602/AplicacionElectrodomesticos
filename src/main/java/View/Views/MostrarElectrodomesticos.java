@@ -100,8 +100,6 @@ public class MostrarElectrodomesticos extends javax.swing.JPanel {
 
         BackgroundMostrarElectrodomesticos = new javax.swing.JPanel();
         title = new javax.swing.JLabel();
-        ElectrodomesticoBusqueda = new javax.swing.JTextField();
-        searchButton = new javax.swing.JButton();
         BorrarElectrodomestico = new javax.swing.JButton();
         EditarElectrodomestico = new javax.swing.JButton();
         CrearElectrodomestico = new javax.swing.JButton();
@@ -112,19 +110,8 @@ public class MostrarElectrodomesticos extends javax.swing.JPanel {
 
         BackgroundMostrarElectrodomesticos.setBackground(new java.awt.Color(255, 255, 255));
 
+        title.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         title.setText("Lista de Electrodomesticos");
-
-        searchButton.setBackground(new java.awt.Color(18, 90, 173));
-        searchButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        searchButton.setForeground(new java.awt.Color(255, 255, 255));
-        searchButton.setText("Buscar");
-        searchButton.setBorderPainted(false);
-        searchButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        searchButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchButtonActionPerformed(evt);
-            }
-        });
 
         BorrarElectrodomestico.setBackground(new java.awt.Color(18, 90, 173));
         BorrarElectrodomestico.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -180,39 +167,26 @@ public class MostrarElectrodomesticos extends javax.swing.JPanel {
         BackgroundMostrarElectrodomesticosLayout.setHorizontalGroup(
             BackgroundMostrarElectrodomesticosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BackgroundMostrarElectrodomesticosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(BackgroundMostrarElectrodomesticosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BackgroundMostrarElectrodomesticosLayout.createSequentialGroup()
-                        .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(699, 699, 699))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundMostrarElectrodomesticosLayout.createSequentialGroup()
-                        .addGroup(BackgroundMostrarElectrodomesticosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(BackgroundMostrarElectrodomesticosLayout.createSequentialGroup()
-                                .addGap(427, 427, 427)
-                                .addComponent(CrearElectrodomestico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(EditarElectrodomestico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(BorrarElectrodomestico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(BackgroundMostrarElectrodomesticosLayout.createSequentialGroup()
-                                .addComponent(ElectrodomesticoBusqueda)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(searchButton)))
-                        .addGap(50, 50, 50))))
+                .addGap(433, 433, 433)
+                .addComponent(CrearElectrodomestico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(EditarElectrodomestico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BorrarElectrodomestico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(50, 50, 50))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundMostrarElectrodomesticosLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1004, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(61, 61, 61))
+            .addGroup(BackgroundMostrarElectrodomesticosLayout.createSequentialGroup()
+                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         BackgroundMostrarElectrodomesticosLayout.setVerticalGroup(
             BackgroundMostrarElectrodomesticosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BackgroundMostrarElectrodomesticosLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(BackgroundMostrarElectrodomesticosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(ElectrodomesticoBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(56, 56, 56)
@@ -317,20 +291,14 @@ public class MostrarElectrodomesticos extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_EditarElectrodomesticoActionPerformed
 
-    private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
-        
-    }//GEN-LAST:event_searchButtonActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BackgroundMostrarElectrodomesticos;
     private javax.swing.JButton BorrarElectrodomestico;
     private javax.swing.JButton CrearElectrodomestico;
     private javax.swing.JButton EditarElectrodomestico;
-    private javax.swing.JTextField ElectrodomesticoBusqueda;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JButton searchButton;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }

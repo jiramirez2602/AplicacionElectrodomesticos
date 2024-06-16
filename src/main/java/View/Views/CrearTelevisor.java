@@ -43,73 +43,57 @@ public class CrearTelevisor extends javax.swing.JPanel {
 
         BackgroundCrearTelevisor = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        CrearTelevisorDefecto = new javax.swing.JLabel();
-        CrearTelevisorTeclado = new javax.swing.JLabel();
-        CrearTelevisorPesoPrecio = new javax.swing.JLabel();
+        CrearTelevisorTeclado = new javax.swing.JButton();
+        CrearTelevisorPrecioPeso = new javax.swing.JButton();
+        CrearTelevisorDefecto = new javax.swing.JButton();
 
         BackgroundCrearTelevisor.setBackground(new java.awt.Color(255, 255, 255));
         BackgroundCrearTelevisor.setPreferredSize(new java.awt.Dimension(1082, 630));
 
         jPanel2.setBackground(new java.awt.Color(21, 101, 192));
 
-        CrearTelevisorDefecto.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        CrearTelevisorDefecto.setForeground(new java.awt.Color(255, 255, 255));
-        CrearTelevisorDefecto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CrearTelevisorDefecto.setText("Crear por defecto");
-        CrearTelevisorDefecto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        CrearTelevisorDefecto.setIconTextGap(35);
-        CrearTelevisorDefecto.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                CrearTelevisorDefectoMouseMoved(evt);
-            }
-        });
-        CrearTelevisorDefecto.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CrearTelevisorDefectoMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                CrearTelevisorDefectoMouseExited(evt);
-            }
-        });
-
-        CrearTelevisorTeclado.setBackground(new java.awt.Color(255, 255, 255));
-        CrearTelevisorTeclado.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        CrearTelevisorTeclado.setBackground(new java.awt.Color(21, 101, 192));
+        CrearTelevisorTeclado.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         CrearTelevisorTeclado.setForeground(new java.awt.Color(255, 255, 255));
-        CrearTelevisorTeclado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         CrearTelevisorTeclado.setText("Crear por teclado");
-        CrearTelevisorTeclado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        CrearTelevisorTeclado.setIconTextGap(35);
-        CrearTelevisorTeclado.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                CrearTelevisorTecladoMouseMoved(evt);
-            }
-        });
-        CrearTelevisorTeclado.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CrearTelevisorTecladoMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                CrearTelevisorTecladoMouseExited(evt);
+        CrearTelevisorTeclado.setBorder(null);
+        CrearTelevisorTeclado.setBorderPainted(false);
+        CrearTelevisorTeclado.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        CrearTelevisorTeclado.setIconTextGap(13);
+        CrearTelevisorTeclado.setInheritsPopupMenu(true);
+        CrearTelevisorTeclado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CrearTelevisorTecladoActionPerformed(evt);
             }
         });
 
-        CrearTelevisorPesoPrecio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        CrearTelevisorPesoPrecio.setForeground(new java.awt.Color(255, 255, 255));
-        CrearTelevisorPesoPrecio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CrearTelevisorPesoPrecio.setText("Crear con precio y peso");
-        CrearTelevisorPesoPrecio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        CrearTelevisorPesoPrecio.setIconTextGap(35);
-        CrearTelevisorPesoPrecio.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                CrearTelevisorPesoPrecioMouseMoved(evt);
+        CrearTelevisorPrecioPeso.setBackground(new java.awt.Color(21, 101, 192));
+        CrearTelevisorPrecioPeso.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        CrearTelevisorPrecioPeso.setForeground(new java.awt.Color(255, 255, 255));
+        CrearTelevisorPrecioPeso.setText("Crear con precio y peso");
+        CrearTelevisorPrecioPeso.setBorder(null);
+        CrearTelevisorPrecioPeso.setBorderPainted(false);
+        CrearTelevisorPrecioPeso.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        CrearTelevisorPrecioPeso.setIconTextGap(13);
+        CrearTelevisorPrecioPeso.setInheritsPopupMenu(true);
+        CrearTelevisorPrecioPeso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CrearTelevisorPrecioPesoActionPerformed(evt);
             }
         });
-        CrearTelevisorPesoPrecio.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CrearTelevisorPesoPrecioMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                CrearTelevisorPesoPrecioMouseExited(evt);
+
+        CrearTelevisorDefecto.setBackground(new java.awt.Color(21, 101, 192));
+        CrearTelevisorDefecto.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        CrearTelevisorDefecto.setForeground(new java.awt.Color(255, 255, 255));
+        CrearTelevisorDefecto.setText("Crear por defecto");
+        CrearTelevisorDefecto.setBorder(null);
+        CrearTelevisorDefecto.setBorderPainted(false);
+        CrearTelevisorDefecto.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        CrearTelevisorDefecto.setIconTextGap(13);
+        CrearTelevisorDefecto.setInheritsPopupMenu(true);
+        CrearTelevisorDefecto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CrearTelevisorDefectoActionPerformed(evt);
             }
         });
 
@@ -120,21 +104,21 @@ public class CrearTelevisor extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CrearTelevisorTeclado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(CrearTelevisorPesoPrecio, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
-                    .addComponent(CrearTelevisorDefecto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(CrearTelevisorTeclado, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
+                    .addComponent(CrearTelevisorPrecioPeso, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
+                    .addComponent(CrearTelevisorDefecto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(CrearTelevisorTeclado, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(CrearTelevisorPesoPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(CrearTelevisorDefecto, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(CrearTelevisorTeclado, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(CrearTelevisorPrecioPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(CrearTelevisorDefecto, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout BackgroundCrearTelevisorLayout = new javax.swing.GroupLayout(BackgroundCrearTelevisor);
@@ -142,16 +126,16 @@ public class CrearTelevisor extends javax.swing.JPanel {
         BackgroundCrearTelevisorLayout.setHorizontalGroup(
             BackgroundCrearTelevisorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BackgroundCrearTelevisorLayout.createSequentialGroup()
-                .addGap(166, 166, 166)
+                .addGap(196, 196, 196)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(759, Short.MAX_VALUE))
+                .addContainerGap(729, Short.MAX_VALUE))
         );
         BackgroundCrearTelevisorLayout.setVerticalGroup(
             BackgroundCrearTelevisorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundCrearTelevisorLayout.createSequentialGroup()
-                .addContainerGap(92, Short.MAX_VALUE)
+            .addGroup(BackgroundCrearTelevisorLayout.createSequentialGroup()
+                .addGap(185, 185, 185)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(82, 82, 82))
+                .addContainerGap(227, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -166,51 +150,27 @@ public class CrearTelevisor extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CrearTelevisorDefectoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearTelevisorDefectoMouseMoved
+    private void CrearTelevisorTecladoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearTelevisorTecladoActionPerformed
+        MostrarJpanel (new TelevisorTeclado(televisores));
+    }//GEN-LAST:event_CrearTelevisorTecladoActionPerformed
 
-    }//GEN-LAST:event_CrearTelevisorDefectoMouseMoved
+    private void CrearTelevisorPrecioPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearTelevisorPrecioPesoActionPerformed
+        MostrarJpanel (new TelevisorPrecioPeso(televisores));
+    }//GEN-LAST:event_CrearTelevisorPrecioPesoActionPerformed
 
-    private void CrearTelevisorDefectoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearTelevisorDefectoMouseClicked
-        boolean resultado = televisores.crearTelevisor();
+    private void CrearTelevisorDefectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearTelevisorDefectoActionPerformed
+       boolean resultado = televisores.crearTelevisor();
         if (resultado) {
             JOptionPane.showMessageDialog(null, "Televisor registrado con éxito.", "Registro Exitoso", JOptionPane.INFORMATION_MESSAGE);
         }
-    }//GEN-LAST:event_CrearTelevisorDefectoMouseClicked
-
-    private void CrearTelevisorDefectoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearTelevisorDefectoMouseExited
-
-    }//GEN-LAST:event_CrearTelevisorDefectoMouseExited
-
-    private void CrearTelevisorTecladoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearTelevisorTecladoMouseMoved
-
-    }//GEN-LAST:event_CrearTelevisorTecladoMouseMoved
-
-    private void CrearTelevisorTecladoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearTelevisorTecladoMouseClicked
-        MostrarJpanel (new TelevisorTeclado(televisores));
-    }//GEN-LAST:event_CrearTelevisorTecladoMouseClicked
-
-    private void CrearTelevisorTecladoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearTelevisorTecladoMouseExited
-
-    }//GEN-LAST:event_CrearTelevisorTecladoMouseExited
-
-    private void CrearTelevisorPesoPrecioMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearTelevisorPesoPrecioMouseMoved
-
-    }//GEN-LAST:event_CrearTelevisorPesoPrecioMouseMoved
-
-    private void CrearTelevisorPesoPrecioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearTelevisorPesoPrecioMouseClicked
-        MostrarJpanel (new TelevisorPrecioPeso(televisores));
-    }//GEN-LAST:event_CrearTelevisorPesoPrecioMouseClicked
-
-    private void CrearTelevisorPesoPrecioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearTelevisorPesoPrecioMouseExited
-
-    }//GEN-LAST:event_CrearTelevisorPesoPrecioMouseExited
+    }//GEN-LAST:event_CrearTelevisorDefectoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BackgroundCrearTelevisor;
-    private javax.swing.JLabel CrearTelevisorDefecto;
-    private javax.swing.JLabel CrearTelevisorPesoPrecio;
-    private javax.swing.JLabel CrearTelevisorTeclado;
+    private javax.swing.JButton CrearTelevisorDefecto;
+    private javax.swing.JButton CrearTelevisorPrecioPeso;
+    private javax.swing.JButton CrearTelevisorTeclado;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

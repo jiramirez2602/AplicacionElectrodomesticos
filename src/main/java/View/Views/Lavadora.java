@@ -43,94 +43,73 @@ public class Lavadora extends javax.swing.JPanel {
 
         BackgroundLavadora = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        EliminarLavadora = new javax.swing.JLabel();
-        CrearLavadora = new javax.swing.JLabel();
-        ModificarLavadora = new javax.swing.JLabel();
-        CalcularTiempoLavado = new javax.swing.JLabel();
+        CrearLavadora = new javax.swing.JButton();
+        ModificarLavadora = new javax.swing.JButton();
+        CalcularTiempodeLavado = new javax.swing.JButton();
+        EliminarLavadora = new javax.swing.JButton();
 
         BackgroundLavadora.setBackground(new java.awt.Color(255, 255, 255));
         BackgroundLavadora.setPreferredSize(new java.awt.Dimension(1082, 630));
 
         jPanel2.setBackground(new java.awt.Color(21, 101, 192));
 
-        EliminarLavadora.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        EliminarLavadora.setForeground(new java.awt.Color(255, 255, 255));
-        EliminarLavadora.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        EliminarLavadora.setText("Eliminar Lavadora");
-        EliminarLavadora.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        EliminarLavadora.setIconTextGap(35);
-        EliminarLavadora.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                EliminarLavadoraMouseMoved(evt);
-            }
-        });
-        EliminarLavadora.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                EliminarLavadoraMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                EliminarLavadoraMouseExited(evt);
-            }
-        });
-
-        CrearLavadora.setBackground(new java.awt.Color(255, 255, 255));
-        CrearLavadora.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        CrearLavadora.setBackground(new java.awt.Color(21, 101, 192));
+        CrearLavadora.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         CrearLavadora.setForeground(new java.awt.Color(255, 255, 255));
-        CrearLavadora.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CrearLavadora.setText("Crear Lavadora");
-        CrearLavadora.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        CrearLavadora.setIconTextGap(35);
-        CrearLavadora.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                CrearLavadoraMouseMoved(evt);
-            }
-        });
-        CrearLavadora.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CrearLavadoraMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                CrearLavadoraMouseExited(evt);
+        CrearLavadora.setText("Crear lavadora");
+        CrearLavadora.setBorder(null);
+        CrearLavadora.setBorderPainted(false);
+        CrearLavadora.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        CrearLavadora.setIconTextGap(13);
+        CrearLavadora.setInheritsPopupMenu(true);
+        CrearLavadora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CrearLavadoraActionPerformed(evt);
             }
         });
 
-        ModificarLavadora.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        ModificarLavadora.setBackground(new java.awt.Color(21, 101, 192));
+        ModificarLavadora.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         ModificarLavadora.setForeground(new java.awt.Color(255, 255, 255));
-        ModificarLavadora.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ModificarLavadora.setText("Modificar Lavadora");
-        ModificarLavadora.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ModificarLavadora.setIconTextGap(35);
-        ModificarLavadora.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                ModificarLavadoraMouseMoved(evt);
-            }
-        });
-        ModificarLavadora.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ModificarLavadoraMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                ModificarLavadoraMouseExited(evt);
+        ModificarLavadora.setText("Modificar lavadora");
+        ModificarLavadora.setBorder(null);
+        ModificarLavadora.setBorderPainted(false);
+        ModificarLavadora.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        ModificarLavadora.setIconTextGap(13);
+        ModificarLavadora.setInheritsPopupMenu(true);
+        ModificarLavadora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificarLavadoraActionPerformed(evt);
             }
         });
 
-        CalcularTiempoLavado.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        CalcularTiempoLavado.setForeground(new java.awt.Color(255, 255, 255));
-        CalcularTiempoLavado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CalcularTiempoLavado.setText("Calcular Tiempo de Lavado");
-        CalcularTiempoLavado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        CalcularTiempoLavado.setIconTextGap(35);
-        CalcularTiempoLavado.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                CalcularTiempoLavadoMouseMoved(evt);
+        CalcularTiempodeLavado.setBackground(new java.awt.Color(21, 101, 192));
+        CalcularTiempodeLavado.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        CalcularTiempodeLavado.setForeground(new java.awt.Color(255, 255, 255));
+        CalcularTiempodeLavado.setText("Calcular tiempo de lavado");
+        CalcularTiempodeLavado.setBorder(null);
+        CalcularTiempodeLavado.setBorderPainted(false);
+        CalcularTiempodeLavado.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        CalcularTiempodeLavado.setIconTextGap(13);
+        CalcularTiempodeLavado.setInheritsPopupMenu(true);
+        CalcularTiempodeLavado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CalcularTiempodeLavadoActionPerformed(evt);
             }
         });
-        CalcularTiempoLavado.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CalcularTiempoLavadoMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                CalcularTiempoLavadoMouseExited(evt);
+
+        EliminarLavadora.setBackground(new java.awt.Color(21, 101, 192));
+        EliminarLavadora.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        EliminarLavadora.setForeground(new java.awt.Color(255, 255, 255));
+        EliminarLavadora.setText("Eliminar lavadora");
+        EliminarLavadora.setBorder(null);
+        EliminarLavadora.setBorderPainted(false);
+        EliminarLavadora.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        EliminarLavadora.setIconTextGap(13);
+        EliminarLavadora.setInheritsPopupMenu(true);
+        EliminarLavadora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarLavadoraActionPerformed(evt);
             }
         });
 
@@ -141,24 +120,24 @@ public class Lavadora extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CrearLavadora, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ModificarLavadora, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(EliminarLavadora, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(CalcularTiempoLavado, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE))
+                    .addComponent(CrearLavadora, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
+                    .addComponent(ModificarLavadora, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
+                    .addComponent(CalcularTiempodeLavado, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
+                    .addComponent(EliminarLavadora, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(CrearLavadora, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(ModificarLavadora, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(CalcularTiempoLavado, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                .addComponent(EliminarLavadora, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                .addContainerGap()
+                .addComponent(CrearLavadora, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(ModificarLavadora, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(CalcularTiempodeLavado, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(EliminarLavadora, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout BackgroundLavadoraLayout = new javax.swing.GroupLayout(BackgroundLavadora);
@@ -166,16 +145,16 @@ public class Lavadora extends javax.swing.JPanel {
         BackgroundLavadoraLayout.setHorizontalGroup(
             BackgroundLavadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BackgroundLavadoraLayout.createSequentialGroup()
-                .addGap(166, 166, 166)
+                .addGap(183, 183, 183)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(652, Short.MAX_VALUE))
+                .addContainerGap(629, Short.MAX_VALUE))
         );
         BackgroundLavadoraLayout.setVerticalGroup(
             BackgroundLavadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLavadoraLayout.createSequentialGroup()
-                .addContainerGap(96, Short.MAX_VALUE)
+            .addGroup(BackgroundLavadoraLayout.createSequentialGroup()
+                .addGap(166, 166, 166)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(142, 142, 142))
+                .addContainerGap(190, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -190,61 +169,29 @@ public class Lavadora extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void EliminarLavadoraMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarLavadoraMouseMoved
+    private void CrearLavadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearLavadoraActionPerformed
+        MostrarJpanel (new CrearLavadora(lavadoras));
+    }//GEN-LAST:event_CrearLavadoraActionPerformed
 
-    }//GEN-LAST:event_EliminarLavadoraMouseMoved
+    private void ModificarLavadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarLavadoraActionPerformed
+        MostrarJpanel (new ModificarLavadorasLista(lavadoras));
+    }//GEN-LAST:event_ModificarLavadoraActionPerformed
 
-    private void EliminarLavadoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarLavadoraMouseClicked
-        MostrarJpanel (new EliminarLavadorasLista(lavadoras));
-    }//GEN-LAST:event_EliminarLavadoraMouseClicked
-
-    private void EliminarLavadoraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarLavadoraMouseExited
-
-    }//GEN-LAST:event_EliminarLavadoraMouseExited
-
-    private void CrearLavadoraMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearLavadoraMouseMoved
-
-    }//GEN-LAST:event_CrearLavadoraMouseMoved
-
-    private void CrearLavadoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearLavadoraMouseClicked
-       MostrarJpanel (new CrearLavadora(lavadoras));
-    }//GEN-LAST:event_CrearLavadoraMouseClicked
-
-    private void CrearLavadoraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearLavadoraMouseExited
-
-    }//GEN-LAST:event_CrearLavadoraMouseExited
-
-    private void ModificarLavadoraMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarLavadoraMouseMoved
-
-    }//GEN-LAST:event_ModificarLavadoraMouseMoved
-
-    private void ModificarLavadoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarLavadoraMouseClicked
-         MostrarJpanel (new ModificarLavadorasLista(lavadoras));
-    }//GEN-LAST:event_ModificarLavadoraMouseClicked
-
-    private void ModificarLavadoraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarLavadoraMouseExited
-
-    }//GEN-LAST:event_ModificarLavadoraMouseExited
-
-    private void CalcularTiempoLavadoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CalcularTiempoLavadoMouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CalcularTiempoLavadoMouseMoved
-
-    private void CalcularTiempoLavadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CalcularTiempoLavadoMouseClicked
+    private void CalcularTiempodeLavadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularTiempodeLavadoActionPerformed
         MostrarJpanel (new TiempodeLavado(lavadoras));
-    }//GEN-LAST:event_CalcularTiempoLavadoMouseClicked
+    }//GEN-LAST:event_CalcularTiempodeLavadoActionPerformed
 
-    private void CalcularTiempoLavadoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CalcularTiempoLavadoMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CalcularTiempoLavadoMouseExited
+    private void EliminarLavadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarLavadoraActionPerformed
+        MostrarJpanel (new EliminarLavadorasLista(lavadoras));
+    }//GEN-LAST:event_EliminarLavadoraActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BackgroundLavadora;
-    private javax.swing.JLabel CalcularTiempoLavado;
-    private javax.swing.JLabel CrearLavadora;
-    private javax.swing.JLabel EliminarLavadora;
-    private javax.swing.JLabel ModificarLavadora;
+    private javax.swing.JButton CalcularTiempodeLavado;
+    private javax.swing.JButton CrearLavadora;
+    private javax.swing.JButton EliminarLavadora;
+    private javax.swing.JButton ModificarLavadora;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

@@ -33,12 +33,12 @@ public class LavadoraPrecioPeso extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        CrearLavadora = new javax.swing.JButton();
         nameLbl1 = new javax.swing.JLabel();
         PrecioLabel = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         nameLbl4 = new javax.swing.JLabel();
         PesoLabel = new javax.swing.JTextField();
+        CrearLavadora = new javax.swing.JButton();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -48,18 +48,6 @@ public class LavadoraPrecioPeso extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setText("Por favor, ingrese los datos para poder crear la Lavadora: ");
 
-        CrearLavadora.setBackground(new java.awt.Color(18, 90, 173));
-        CrearLavadora.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        CrearLavadora.setForeground(new java.awt.Color(255, 255, 255));
-        CrearLavadora.setText("Crear");
-        CrearLavadora.setBorderPainted(false);
-        CrearLavadora.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        CrearLavadora.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CrearLavadoraActionPerformed(evt);
-            }
-        });
-
         nameLbl1.setText("Precio Base");
 
         jSeparator1.setForeground(new java.awt.Color(204, 204, 204));
@@ -67,6 +55,21 @@ public class LavadoraPrecioPeso extends javax.swing.JPanel {
         jSeparator1.setPreferredSize(new java.awt.Dimension(200, 10));
 
         nameLbl4.setText("Peso Base");
+
+        CrearLavadora.setBackground(new java.awt.Color(21, 101, 192));
+        CrearLavadora.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        CrearLavadora.setForeground(new java.awt.Color(255, 255, 255));
+        CrearLavadora.setText("Crear");
+        CrearLavadora.setBorder(null);
+        CrearLavadora.setBorderPainted(false);
+        CrearLavadora.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        CrearLavadora.setIconTextGap(13);
+        CrearLavadora.setInheritsPopupMenu(true);
+        CrearLavadora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CrearLavadoraActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -83,15 +86,17 @@ public class LavadoraPrecioPeso extends javax.swing.JPanel {
                         .addGap(554, 554, 554))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nameLbl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(nameLbl4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(PrecioLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 692, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(CrearLavadora, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(PesoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 692, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)))
-                        .addGap(18, 18, 18)
+                                    .addComponent(nameLbl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(nameLbl4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(CrearLavadora, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(PrecioLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 692, Short.MAX_VALUE)
+                                    .addComponent(PesoLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 692, Short.MAX_VALUE))
+                                .addGap(60, 60, 60)))
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
@@ -115,8 +120,8 @@ public class LavadoraPrecioPeso extends javax.swing.JPanel {
                         .addComponent(nameLbl4)
                         .addGap(18, 18, 18)
                         .addComponent(PesoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(64, 64, 64)
-                        .addComponent(CrearLavadora, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(CrearLavadora, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
@@ -136,11 +141,11 @@ public class LavadoraPrecioPeso extends javax.swing.JPanel {
         String valorPrecio = PrecioLabel.getText();
         String valorPeso = PesoLabel.getText();
         boolean resultado = listaDeLavadoras.crearLavadora(valorPrecio, valorPeso); 
-    if (resultado) {
-        JOptionPane.showMessageDialog(null, "Lavadora registrada con éxito.", "Registro Exitoso", JOptionPane.INFORMATION_MESSAGE);
-    } else {
-        JOptionPane.showMessageDialog(null, "Error al registrar la lavadora. Verifique los datos ingresados.", "Error", JOptionPane.ERROR_MESSAGE);
-    }
+        if (resultado) {
+            JOptionPane.showMessageDialog(null, "Lavadora registrada con éxito.", "Registro Exitoso", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "Error al registrar la lavadora. Verifique los datos ingresados.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_CrearLavadoraActionPerformed
 
 

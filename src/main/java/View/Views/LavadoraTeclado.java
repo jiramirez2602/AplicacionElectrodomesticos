@@ -35,7 +35,6 @@ public class LavadoraTeclado extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         apPLbl2 = new javax.swing.JLabel();
-        CrearLavadora = new javax.swing.JButton();
         nameLbl1 = new javax.swing.JLabel();
         PrecioLabel = new javax.swing.JTextField();
         apPLbl1 = new javax.swing.JLabel();
@@ -46,6 +45,7 @@ public class LavadoraTeclado extends javax.swing.JPanel {
         jSeparator1 = new javax.swing.JSeparator();
         ComboBoxColor = new javax.swing.JComboBox<>();
         ComboBoxConsumo = new javax.swing.JComboBox<>();
+        CrearLavadora = new javax.swing.JButton();
 
         BackgroundLavadoraTeclado.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -56,18 +56,6 @@ public class LavadoraTeclado extends javax.swing.JPanel {
         jLabel2.setText("Por favor, ingrese los datos para poder crear la Lavadora: ");
 
         apPLbl2.setText("Peso");
-
-        CrearLavadora.setBackground(new java.awt.Color(18, 90, 173));
-        CrearLavadora.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        CrearLavadora.setForeground(new java.awt.Color(255, 255, 255));
-        CrearLavadora.setText("Crear");
-        CrearLavadora.setBorderPainted(false);
-        CrearLavadora.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        CrearLavadora.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CrearLavadoraActionPerformed(evt);
-            }
-        });
 
         nameLbl1.setText("Precio Base");
 
@@ -84,6 +72,21 @@ public class LavadoraTeclado extends javax.swing.JPanel {
         ComboBoxColor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Blanco", "Negro", "Azul", "Rojo ", "Gris", " " }));
 
         ComboBoxConsumo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C", "D", "E", "F" }));
+
+        CrearLavadora.setBackground(new java.awt.Color(21, 101, 192));
+        CrearLavadora.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        CrearLavadora.setForeground(new java.awt.Color(255, 255, 255));
+        CrearLavadora.setText("Crear");
+        CrearLavadora.setBorder(null);
+        CrearLavadora.setBorderPainted(false);
+        CrearLavadora.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        CrearLavadora.setIconTextGap(13);
+        CrearLavadora.setInheritsPopupMenu(true);
+        CrearLavadora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CrearLavadoraActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout BackgroundLavadoraTecladoLayout = new javax.swing.GroupLayout(BackgroundLavadoraTeclado);
         BackgroundLavadoraTeclado.setLayout(BackgroundLavadoraTecladoLayout);
@@ -115,12 +118,11 @@ public class LavadoraTeclado extends javax.swing.JPanel {
                         .addGroup(BackgroundLavadoraTecladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(apPLbl2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(BackgroundLavadoraTecladoLayout.createSequentialGroup()
-                                .addGroup(BackgroundLavadoraTecladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(BackgroundLavadoraTecladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(nameLbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(CargaLabel)
-                                        .addComponent(CrearLavadora, javax.swing.GroupLayout.DEFAULT_SIZE, 454, Short.MAX_VALUE))
-                                    .addComponent(PesoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(BackgroundLavadoraTecladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(nameLbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(CargaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 454, Short.MAX_VALUE)
+                                    .addComponent(PesoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 454, Short.MAX_VALUE)
+                                    .addComponent(CrearLavadora, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(0, 0, Short.MAX_VALUE))))))
         );
         BackgroundLavadoraTecladoLayout.setVerticalGroup(
@@ -144,7 +146,7 @@ public class LavadoraTeclado extends javax.swing.JPanel {
                         .addComponent(apMLbl1)
                         .addGap(15, 15, 15)
                         .addComponent(ComboBoxConsumo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 265, Short.MAX_VALUE))
                     .addGroup(BackgroundLavadoraTecladoLayout.createSequentialGroup()
                         .addComponent(apPLbl2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -153,9 +155,9 @@ public class LavadoraTeclado extends javax.swing.JPanel {
                         .addComponent(nameLbl2)
                         .addGap(15, 15, 15)
                         .addComponent(CargaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(CrearLavadora, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(243, Short.MAX_VALUE))
+                        .addGap(28, 28, 28)
+                        .addComponent(CrearLavadora, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(BackgroundLavadoraTecladoLayout.createSequentialGroup()
                         .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(118, 118, 118))))
@@ -186,7 +188,6 @@ public class LavadoraTeclado extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "Error al registrar la lavadora. Verifique los datos ingresados.", "Error", JOptionPane.ERROR_MESSAGE);
         }
-
     }//GEN-LAST:event_CrearLavadoraActionPerformed
 
 
