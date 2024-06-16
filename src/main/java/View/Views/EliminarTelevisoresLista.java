@@ -11,6 +11,9 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableCellRenderer;
 import model.Televisor;
 import javax.swing.table.DefaultTableModel;
 
@@ -27,7 +30,7 @@ public class EliminarTelevisoresLista extends javax.swing.JPanel {
         this.listaDeTelevisores = televisor;
         idMap = new HashMap<>();
         inicializarTabla();
-        actualizarTabla();
+        actualizarTabla(jTable1);
         configurarBotonBorrar();
     }
     
@@ -37,11 +40,21 @@ public class EliminarTelevisoresLista extends javax.swing.JPanel {
         jTable1.setModel(tableModel);
     }
     
-    public void actualizarTabla() {
+    public void actualizarTabla(JTable table) {
          
         tableModel.setRowCount(0);
         idMap.clear(); 
         int row = 0;
+        
+        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+        centerRenderer.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        
+        for (int i = 0; i < tableModel.getColumnCount(); i++) {
+            table.getColumnModel().getColumn(i).setCellRenderer(centerRenderer);
+        }
+        
+        
         
          for (model.Televisor televisor : listaDeTelevisores.getListaDeTelevisores()) {
             Object[] fila = {
@@ -165,13 +178,14 @@ public class EliminarTelevisoresLista extends javax.swing.JPanel {
         int selectedRow = jTable1.getSelectedRow();
     if (selectedRow > -1) {
         String tipo = (String) tableModel.getValueAt(selectedRow, 0);
-        String id = idMap.get(selectedRow); // Obtener el ID del mapa usando la fila seleccionada
-
+        String id = idMap.get(selectedRow);
+        
+         boolean eliminado = false;
         if (tipo.equals("Televisor")) {
-            boolean eliminado = eliminarTelevisor(id);
+            eliminado = listaDeTelevisores.eliminarTelevisor(id);
 
             if (eliminado) {
-                actualizarTabla();
+                actualizarTabla(jTable1);
             } else {
                 JOptionPane.showMessageDialog(this, "Error al eliminar el televisor", "Error", JOptionPane.ERROR_MESSAGE);
             }
