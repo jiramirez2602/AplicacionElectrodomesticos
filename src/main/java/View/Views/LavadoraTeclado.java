@@ -50,7 +50,7 @@ public class LavadoraTeclado extends javax.swing.JPanel {
         BackgroundLavadoraTeclado.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setText("¡Bienvendio!");
+        jLabel1.setText("Lavadora por teclado");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setText("Por favor, ingrese los datos para poder crear la Lavadora: ");

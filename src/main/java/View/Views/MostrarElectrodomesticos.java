@@ -11,6 +11,9 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableCellRenderer;
 import model.Televisor;
 import javax.swing.table.DefaultTableModel;
 
@@ -29,7 +32,7 @@ public class MostrarElectrodomesticos extends javax.swing.JPanel {
         this.listaDeTelevisores=tv;
         idMap = new HashMap<>();
         inicializarTabla();
-        actualizarTabla();
+        actualizarTabla(jTable1);
         configurarBotonBorrar();
     }
     
@@ -39,13 +42,23 @@ public class MostrarElectrodomesticos extends javax.swing.JPanel {
         jTable1.setModel(tableModel);
     }
     
-    public void actualizarTabla() {
-         
+        public void actualizarTabla(JTable table) {
+        // Limpiar el modelo de la tabla y el mapa de IDs
+        DefaultTableModel tableModel = (DefaultTableModel) table.getModel();
         tableModel.setRowCount(0);
-        idMap.clear(); 
         int row = 0;
-        
-         for (Televisor televisor : listaDeTelevisores.getListaDeTelevisores()) {
+
+        // Configurar el renderer para centrar el contenido de las celdas
+        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+        centerRenderer.setHorizontalAlignment(SwingConstants.CENTER);
+
+        // Aplicar el renderer a cada columna de la tabla
+        for (int i = 0; i < tableModel.getColumnCount(); i++) {
+            table.getColumnModel().getColumn(i).setCellRenderer(centerRenderer);
+        }
+
+        // Iterar sobre los televisores y añadir filas a la tabla
+        for (Televisor televisor : listaDeTelevisores.getListaDeTelevisores()) {
             Object[] fila = {
                 "Televisor",
                 televisor.getPrecioBase(),
@@ -56,22 +69,23 @@ public class MostrarElectrodomesticos extends javax.swing.JPanel {
                 televisor.precioFinal()
             };
             tableModel.addRow(fila);
-            idMap.put(row, televisor.getId()); // Asociar la fila con el ID
+            idMap.put(row, televisor.getId());
             row++;
         }
 
-         for (Lavadora lavadora : listaDeLavadoras.getListaDeLavadoras()) {
+        // Iterar sobre las lavadoras y añadir filas a la tabla
+        for (Lavadora lavadora : listaDeLavadoras.getListaDeLavadoras()) {
             Object[] fila = {
                 "Lavadora",
                 lavadora.getPrecioBase(),
                 lavadora.getColor(),
                 lavadora.getConsumoEnergetico(),
                 lavadora.getPeso(),
-                lavadora.getCarga() + " kg",
+                lavadora.getCarga() + " kg de carga",
                 lavadora.precioFinal()
             };
             tableModel.addRow(fila);
-            idMap.put(row, lavadora.getId()); // Asociar la fila con el ID
+            idMap.put(row, lavadora.getId()); 
             row++;
         }
     }
@@ -225,48 +239,11 @@ public class MostrarElectrodomesticos extends javax.swing.JPanel {
     }//GEN-LAST:event_CrearElectrodomesticoActionPerformed
 
     private void BorrarElectrodomesticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarElectrodomesticoActionPerformed
-        int selectedRow = jTable1.getSelectedRow();
-        if (selectedRow > -1) {
-            String tipo = (String) tableModel.getValueAt(selectedRow, 0);
-            String id = idMap.get(selectedRow); // Obtener el ID del mapa usando la fila seleccionada
-
-            boolean eliminado = false;
-            if (tipo.equals("Televisor")) {
-                eliminado = eliminarTelevisor(id);
-            } else if (tipo.equals("Lavadora")) {
-                eliminado = eliminarLavadora(id);
-            }
-
-            if (eliminado) {
-                actualizarTabla();
-            } else {
-                JOptionPane.showMessageDialog(this, "Error al eliminar el electrodoméstico", "Error", JOptionPane.ERROR_MESSAGE);
-            }
-        } else {
-            JOptionPane.showMessageDialog(this, "Seleccione un electrodoméstico para borrar", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-    }
-
-    public boolean eliminarTelevisor(String id) {
-        Televisor televisor = listaDeTelevisores.listarTelevisor(id);
-        if (televisor != null) {
-            listaDeTelevisores.getListaDeTelevisores().remove(televisor);
-            return true;
-        }
-        return false;
-    }
-
-    public boolean eliminarLavadora(String id) {
-        Lavadora lavadora = listaDeLavadoras.listarLavadora(id);
-        if (lavadora != null) {
-            listaDeLavadoras.getListaDeLavadoras().remove(lavadora);
-            return true;
-        }
-        return false;
+        
     }//GEN-LAST:event_BorrarElectrodomesticoActionPerformed
 
     private void EditarElectrodomesticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarElectrodomesticoActionPerformed
-        int selectedRow = jTable1.getSelectedRow();
+         int selectedRow = jTable1.getSelectedRow();
         if (selectedRow > -1) {
         String tipo = (String) tableModel.getValueAt(selectedRow, 0);
         String id = idMap.get(selectedRow);
