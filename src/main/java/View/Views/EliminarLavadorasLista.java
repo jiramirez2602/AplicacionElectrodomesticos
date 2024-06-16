@@ -173,6 +173,7 @@ public class EliminarLavadorasLista extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BorrarELavadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarELavadoraActionPerformed
+        BorrarELavadora.setEnabled(false); 
         int selectedRow = jTable1.getSelectedRow();
         if (selectedRow > -1) {
             String tipo = (String) tableModel.getValueAt(selectedRow, 0);
@@ -191,7 +192,9 @@ public class EliminarLavadorasLista extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(this, "Seleccione un electrodoméstico para borrar", "Error", JOptionPane.ERROR_MESSAGE);
         }
-    }
+        
+        BorrarELavadora.setEnabled(true); 
+    }//GEN-LAST:event_BorrarELavadoraActionPerformed
 
     public boolean eliminarLavadora(String id) {
         Lavadora lavadora = listaDeLavadoras.listarLavadora(id);
@@ -200,8 +203,7 @@ public class EliminarLavadorasLista extends javax.swing.JPanel {
             return true;
         }
         return false;
-    }//GEN-LAST:event_BorrarELavadoraActionPerformed
-
+     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BackgroundMostrarLavadoras;

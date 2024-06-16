@@ -33,7 +33,6 @@ public class MostrarElectrodomesticos extends javax.swing.JPanel {
         idMap = new HashMap<>();
         inicializarTabla();
         actualizarTabla(jTable1);
-        configurarBotonBorrar();
     }
     
     private void inicializarTabla() {
@@ -99,14 +98,7 @@ public class MostrarElectrodomesticos extends javax.swing.JPanel {
         BackgroundMostrarElectrodomesticos.repaint();
     }
      
-    private void configurarBotonBorrar() {
-        BorrarElectrodomestico.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent evt) {
-                BorrarElectrodomesticoActionPerformed(evt);
-            }
-        });
-    }
+    
      
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -238,32 +230,6 @@ public class MostrarElectrodomesticos extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_CrearElectrodomesticoActionPerformed
 
-    private void BorrarElectrodomesticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarElectrodomesticoActionPerformed
-        int selectedRow = jTable1.getSelectedRow();
-
-        if (selectedRow > -1) {
-            String id = idMap.get(selectedRow);
-            String tipo = (String) jTable1.getValueAt(selectedRow, 0);
-
-            boolean eliminado = false;
-            if ("Lavadora".equals(tipo)) {
-                eliminado = listaDeLavadoras.eliminarLavadora(id);
-            } else if ("Televisor".equals(tipo)) {
-                eliminado = listaDeTelevisores.eliminarTelevisor(id);
-            }
-
-            if (eliminado) {
-                // Actualizar la tabla si se eliminó correctamente
-                actualizarTabla(jTable1);
-                JOptionPane.showMessageDialog(this, tipo + " eliminada correctamente", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-            } else {
-                JOptionPane.showMessageDialog(this, "Error al eliminar " + tipo, "Error", JOptionPane.ERROR_MESSAGE);
-            }
-        } else {
-            JOptionPane.showMessageDialog(this, "Seleccione un electrodoméstico para eliminar", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-    }//GEN-LAST:event_BorrarElectrodomesticoActionPerformed
-
     private void EditarElectrodomesticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarElectrodomesticoActionPerformed
         int selectedRow = jTable1.getSelectedRow();
         if (selectedRow > -1) {
@@ -289,6 +255,36 @@ public class MostrarElectrodomesticos extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Seleccione un electrodoméstico para modificar", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_EditarElectrodomesticoActionPerformed
+
+    private void BorrarElectrodomesticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarElectrodomesticoActionPerformed
+       BorrarElectrodomestico.setEnabled(false); 
+       
+        int selectedRow = jTable1.getSelectedRow();
+
+        if (selectedRow > -1) {
+            String id = idMap.get(selectedRow);
+            String tipo = (String) jTable1.getValueAt(selectedRow, 0);
+
+            boolean eliminado = false;
+            if ("Lavadora".equals(tipo)) {
+                eliminado = listaDeLavadoras.eliminarLavadora(id);
+            } else if ("Televisor".equals(tipo)) {
+                eliminado = listaDeTelevisores.eliminarTelevisor(id);
+            }
+
+            if (eliminado) {
+                // Actualizar la tabla si se eliminó correctamente
+                actualizarTabla(jTable1);
+                JOptionPane.showMessageDialog(this, tipo + " eliminada correctamente", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "Error al eliminar " + tipo, "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Seleccione un electrodoméstico para eliminar", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+        BorrarElectrodomestico.setEnabled(true); 
+    }//GEN-LAST:event_BorrarElectrodomesticoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

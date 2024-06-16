@@ -175,26 +175,28 @@ public class EliminarTelevisoresLista extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BorrarTelevisorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarTelevisorActionPerformed
+        BorrarTelevisor.setEnabled(false); 
         int selectedRow = jTable1.getSelectedRow();
-    if (selectedRow > -1) {
-        String tipo = (String) tableModel.getValueAt(selectedRow, 0);
-        String id = idMap.get(selectedRow);
-        
-         boolean eliminado = false;
-        if (tipo.equals("Televisor")) {
-            eliminado = listaDeTelevisores.eliminarTelevisor(id);
+        if (selectedRow > -1) {
+            String tipo = (String) tableModel.getValueAt(selectedRow, 0);
+            String id = idMap.get(selectedRow);
 
-            if (eliminado) {
-                actualizarTabla(jTable1);
+             boolean eliminado = false;
+            if (tipo.equals("Televisor")) {
+                eliminado = listaDeTelevisores.eliminarTelevisor(id);
+
+                if (eliminado) {
+                    actualizarTabla(jTable1);
+                } else {
+                    JOptionPane.showMessageDialog(this, "Error al eliminar el televisor", "Error", JOptionPane.ERROR_MESSAGE);
+                }
             } else {
-                JOptionPane.showMessageDialog(this, "Error al eliminar el televisor", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Seleccione un televisor para borrar", "Error", JOptionPane.ERROR_MESSAGE);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Seleccione un televisor para borrar", "Error", JOptionPane.ERROR_MESSAGE);
         }
-    } else {
-        JOptionPane.showMessageDialog(this, "Seleccione un televisor para borrar", "Error", JOptionPane.ERROR_MESSAGE);
-    }
+        BorrarTelevisor.setEnabled(true); 
     }//GEN-LAST:event_BorrarTelevisorActionPerformed
     
     public boolean eliminarTelevisor(String id) {
