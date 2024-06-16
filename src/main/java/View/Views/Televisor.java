@@ -45,6 +45,7 @@ public class Televisor extends javax.swing.JPanel {
         CrearTelevisor = new javax.swing.JButton();
         ModificarTelevisor = new javax.swing.JButton();
         Eliminartelevisor = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         BackgroundTelevisor.setBackground(new java.awt.Color(255, 255, 255));
         BackgroundTelevisor.setPreferredSize(new java.awt.Dimension(1082, 630));
@@ -120,6 +121,8 @@ public class Televisor extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/television.png"))); // NOI18N
+
         javax.swing.GroupLayout BackgroundTelevisorLayout = new javax.swing.GroupLayout(BackgroundTelevisor);
         BackgroundTelevisor.setLayout(BackgroundTelevisorLayout);
         BackgroundTelevisorLayout.setHorizontalGroup(
@@ -127,25 +130,29 @@ public class Televisor extends javax.swing.JPanel {
             .addGroup(BackgroundTelevisorLayout.createSequentialGroup()
                 .addGap(196, 196, 196)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(729, Short.MAX_VALUE))
+                .addGap(200, 200, 200)
+                .addComponent(jLabel1)
+                .addContainerGap(166, Short.MAX_VALUE))
         );
         BackgroundTelevisorLayout.setVerticalGroup(
             BackgroundTelevisorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BackgroundTelevisorLayout.createSequentialGroup()
                 .addGap(185, 185, 185)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(227, Short.MAX_VALUE))
+                .addGroup(BackgroundTelevisorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(241, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BackgroundTelevisor, javax.swing.GroupLayout.DEFAULT_SIZE, 1195, Short.MAX_VALUE)
+            .addComponent(BackgroundTelevisor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BackgroundTelevisor, javax.swing.GroupLayout.DEFAULT_SIZE, 616, Short.MAX_VALUE)
+            .addComponent(BackgroundTelevisor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -167,6 +174,7 @@ public class Televisor extends javax.swing.JPanel {
     private javax.swing.JButton CrearTelevisor;
     private javax.swing.JButton Eliminartelevisor;
     private javax.swing.JButton ModificarTelevisor;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

@@ -47,6 +47,7 @@ public class Lavadora extends javax.swing.JPanel {
         ModificarLavadora = new javax.swing.JButton();
         CalcularTiempodeLavado = new javax.swing.JButton();
         EliminarLavadora = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         BackgroundLavadora.setBackground(new java.awt.Color(255, 255, 255));
         BackgroundLavadora.setPreferredSize(new java.awt.Dimension(1082, 630));
@@ -140,6 +141,8 @@ public class Lavadora extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lavadora(3).png"))); // NOI18N
+
         javax.swing.GroupLayout BackgroundLavadoraLayout = new javax.swing.GroupLayout(BackgroundLavadora);
         BackgroundLavadora.setLayout(BackgroundLavadoraLayout);
         BackgroundLavadoraLayout.setHorizontalGroup(
@@ -147,13 +150,17 @@ public class Lavadora extends javax.swing.JPanel {
             .addGroup(BackgroundLavadoraLayout.createSequentialGroup()
                 .addGap(183, 183, 183)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(629, Short.MAX_VALUE))
+                .addGap(200, 200, 200)
+                .addComponent(jLabel2)
+                .addContainerGap(179, Short.MAX_VALUE))
         );
         BackgroundLavadoraLayout.setVerticalGroup(
             BackgroundLavadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BackgroundLavadoraLayout.createSequentialGroup()
                 .addGap(166, 166, 166)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(BackgroundLavadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(190, Short.MAX_VALUE))
         );
 
@@ -192,6 +199,7 @@ public class Lavadora extends javax.swing.JPanel {
     private javax.swing.JButton CrearLavadora;
     private javax.swing.JButton EliminarLavadora;
     private javax.swing.JButton ModificarLavadora;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

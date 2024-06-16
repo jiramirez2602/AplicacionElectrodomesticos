@@ -35,6 +35,7 @@ public class Dasboard extends javax.swing.JFrame {
         Conexion.conectarFirebase();
         initComponents();
         InitContent();
+        SetDate();
         this.setLocationRelativeTo(null);
         lavadoras = new ListaDeLavadoras();
         televisores = new ListaDeTelevisores();
@@ -267,6 +268,8 @@ public class Dasboard extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
+        LabelFecha.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        LabelFecha.setForeground(new java.awt.Color(255, 255, 255));
         LabelFecha.setText("Hoy es {dayname} {day} de {month} de {year}");
 
         javax.swing.GroupLayout PanelHorizontalLayout = new javax.swing.GroupLayout(PanelHorizontal);
@@ -280,8 +283,8 @@ public class Dasboard extends javax.swing.JFrame {
             .addGroup(PanelHorizontalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(PanelHorizontalLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(LabelFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 1043, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(51, Short.MAX_VALUE)))
+                    .addComponent(LabelFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 721, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(373, Short.MAX_VALUE)))
         );
         PanelHorizontalLayout.setVerticalGroup(
             PanelHorizontalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
