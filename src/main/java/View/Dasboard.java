@@ -216,7 +216,7 @@ public class Dasboard extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Repara Todo");
+        jLabel1.setText("MultiAparatos");
 
         javax.swing.GroupLayout PanelIzquierdoLayout = new javax.swing.GroupLayout(PanelIzquierdo);
         PanelIzquierdo.setLayout(PanelIzquierdoLayout);
