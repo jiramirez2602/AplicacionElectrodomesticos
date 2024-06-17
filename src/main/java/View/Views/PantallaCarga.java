@@ -6,6 +6,7 @@ package View.Views;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
 import javax.swing.Timer;
 
 /**
@@ -19,6 +20,7 @@ public class PantallaCarga extends javax.swing.JFrame {
      */
     public PantallaCarga() {
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/logo_repara.png")).getImage());
         pbCargaIniciado();
         setLocationRelativeTo(null);
     }
