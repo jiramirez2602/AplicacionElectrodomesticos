@@ -271,7 +271,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/MOSTRAR.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Mostrar Electrodom&#xe9;sticos"/>
+                    <Property name="text" type="java.lang.String" value="Mostrar electrodom&#xe9;sticos"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
                         <MatteColorBorder bottom="1" left="20" right="1" top="1"/>
@@ -303,7 +303,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/Estadisticas.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Mostrar Estadistica"/>
+                    <Property name="text" type="java.lang.String" value="Mostrar estad&#xed;stica"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
                         <MatteColorBorder bottom="1" left="20" right="1" top="1"/>

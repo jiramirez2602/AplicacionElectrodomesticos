@@ -104,7 +104,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="24" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Televisor con precio y peso"/>
+            <Property name="text" type="java.lang.String" value="Crear televisor con precio y peso"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
@@ -112,7 +112,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Por favor, ingrese los datos para poder crear la Televisor: "/>
+            <Property name="text" type="java.lang.String" value="Por favor, ingrese los datos para poder crear el Televisor: "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="CrearTelevisor">

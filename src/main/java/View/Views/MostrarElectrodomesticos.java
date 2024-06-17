@@ -117,7 +117,7 @@ public class MostrarElectrodomesticos extends javax.swing.JPanel {
         BackgroundMostrarElectrodomesticos.setBackground(new java.awt.Color(255, 255, 255));
 
         title.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        title.setText("Lista de Electrodomesticos");
+        title.setText("Lista de Electrodomésticos");
 
         BorrarElectrodomestico.setBackground(new java.awt.Color(18, 90, 173));
         BorrarElectrodomestico.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N

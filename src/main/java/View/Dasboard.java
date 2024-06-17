@@ -169,7 +169,7 @@ public class Dasboard extends javax.swing.JFrame {
         BotonMostrarElectrodomesticos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BotonMostrarElectrodomesticos.setForeground(new java.awt.Color(255, 255, 255));
         BotonMostrarElectrodomesticos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MOSTRAR.png"))); // NOI18N
-        BotonMostrarElectrodomesticos.setText("Mostrar Electrodomésticos");
+        BotonMostrarElectrodomesticos.setText("Mostrar electrodomésticos");
         BotonMostrarElectrodomesticos.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 20, 1, 1, new java.awt.Color(0, 0, 0)));
         BotonMostrarElectrodomesticos.setBorderPainted(false);
         BotonMostrarElectrodomesticos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -186,7 +186,7 @@ public class Dasboard extends javax.swing.JFrame {
         MostrarEstadistica.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         MostrarEstadistica.setForeground(new java.awt.Color(255, 255, 255));
         MostrarEstadistica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Estadisticas.png"))); // NOI18N
-        MostrarEstadistica.setText("Mostrar Estadistica");
+        MostrarEstadistica.setText("Mostrar estadística");
         MostrarEstadistica.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 20, 1, 1, new java.awt.Color(0, 0, 0)));
         MostrarEstadistica.setBorderPainted(false);
         MostrarEstadistica.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));

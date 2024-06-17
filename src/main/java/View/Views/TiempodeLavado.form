@@ -107,7 +107,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="24" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="&#xa1;Bienvendio!"/>
+            <Property name="text" type="java.lang.String" value="Calcular tiempo de lavado"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
@@ -115,7 +115,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Por favor, ingrese los datos para poder el tiempo de lavado: "/>
+            <Property name="text" type="java.lang.String" value="Por favor, ingrese los datos para poder calcular el tiempo de lavado: "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="CalcularTiempoLavado">

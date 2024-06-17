@@ -43,7 +43,7 @@ public class LavadoraPrecioPeso extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setText("Lavador con precio y peso");
+        jLabel1.setText("Crear lavador con precio y peso");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setText("Por favor, ingrese los datos para poder crear la Lavadora: ");

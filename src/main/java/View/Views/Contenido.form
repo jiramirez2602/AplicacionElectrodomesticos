@@ -136,7 +136,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Bienvenidoo a la mejor tienda de electrodomestcos de la ciudad"/>
+            <Property name="text" type="java.lang.String" value="Bienvenido a la mejor tienda de electrodom&#xe9;sticos de la ciudad"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
@@ -144,7 +144,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Somos tu solucion para tus problemas con los electrodomestcios, en este programa podras : "/>
+            <Property name="text" type="java.lang.String" value="Somos tu soluci&#xf3;n para tus problemas con los electrodom&#xe9;sticos, en este programa podras : "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
@@ -192,7 +192,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Sobre tus electrodomesticos y mucho mas....."/>
+            <Property name="text" type="java.lang.String" value="Tus electrodom&#xe9;sticos y algo mas....."/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel10">

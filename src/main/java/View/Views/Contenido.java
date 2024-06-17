@@ -45,10 +45,10 @@ public class Contenido extends javax.swing.JPanel {
         jLabel1.setText("¡Bienvendio!");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel2.setText("Bienvenidoo a la mejor tienda de electrodomestcos de la ciudad");
+        jLabel2.setText("Bienvenido a la mejor tienda de electrodomésticos de la ciudad");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel3.setText("Somos tu solucion para tus problemas con los electrodomestcios, en este programa podras : ");
+        jLabel3.setText("Somos tu solución para tus problemas con los electrodomésticos, en este programa podras : ");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setText("- Modificar");
@@ -66,7 +66,7 @@ public class Contenido extends javax.swing.JPanel {
         jLabel8.setText("- Actualizar");
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel9.setText("Sobre tus electrodomesticos y mucho mas.....");
+        jLabel9.setText("Tus electrodomésticos y algo mas.....");
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logo Dash.png"))); // NOI18N
         jLabel10.setVerticalAlignment(javax.swing.SwingConstants.TOP);
