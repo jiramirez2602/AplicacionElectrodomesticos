@@ -7,11 +7,14 @@ package View.Views;
 import controller.ListaDeLavadoras;
 import controller.ListaDeTelevisores;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.chart.renderer.category.BarRenderer;
 import org.jfree.data.category.DefaultCategoryDataset;
 /**
  *
@@ -30,36 +33,40 @@ public class MostrarEstadistica extends javax.swing.JPanel {
         mostrarGrafica();
     }
     
-   private void mostrarGrafica(){
+    private void mostrarGrafica(){
         int N1 = listaDeLavadoras.obtenerCantidadDeLavadoras();
         int N2 = listaDeTelevisores.obtenerCantidadDeTelevisores();
-        System.out.println(N1);
-        
+
         DefaultCategoryDataset datos = new DefaultCategoryDataset();
-        
+
         datos.setValue(N1, "Electrodomestico", "Lavadoras");
         datos.setValue(N2, "Electrodomestico", "Televisores");
-        
+
         JFreeChart grafico = ChartFactory.createBarChart(
-        "Cantiadad de Electrodomesticos",
-        "Electrodomesticos",
-        "Cantidad",
-        datos,
-        PlotOrientation.VERTICAL,
-        true,
-        true,
-        false
+            "Cantidad de Electrodomesticos",
+            "Electrodomesticos",
+            "Cantidad",
+            datos,
+            PlotOrientation.VERTICAL,
+            true,
+            true,
+            false
         );
-        
+
+       
+        CategoryPlot plot = grafico.getCategoryPlot();
+        BarRenderer renderer = (BarRenderer) plot.getRenderer();
+        renderer.setSeriesPaint(0, Color.BLUE); 
+        renderer.setSeriesPaint(1, Color.RED); 
+
         ChartPanel panel = new ChartPanel(grafico);
         panel.setMouseWheelEnabled(true);
         panel.setPreferredSize(new Dimension(1006,558));
         Estadistica.setLayout(new BorderLayout());
-        Estadistica.add(panel,BorderLayout.NORTH);
+        Estadistica.add(panel, BorderLayout.NORTH);
         Estadistica.revalidate();
         Estadistica.repaint();
-        
-   }
+    }
      
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
