@@ -4,8 +4,8 @@
  */
 package View.Views;
 
-import controller.ListaDeLavadoras;
-import controller.ListaDeTelevisores;
+import javax.swing.SwingUtilities;
+import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -16,6 +16,8 @@ import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.renderer.category.BarRenderer;
 import org.jfree.data.category.DefaultCategoryDataset;
+import controller.ListaDeLavadoras;
+import controller.ListaDeTelevisores;
 /**
  *
  * @author derno
@@ -30,42 +32,53 @@ public class MostrarEstadistica extends javax.swing.JPanel {
         initComponents();
         this.listaDeLavadoras = lavadora;
         this.listaDeTelevisores = tv;
+        actualizarDatos();
         mostrarGrafica();
     }
     
+    private void actualizarDatos() {
+        listaDeLavadoras.getListaDeLavadoras();
+        listaDeTelevisores.getListaDeTelevisores();
+    }
+    
     private void mostrarGrafica(){
-        int N1 = listaDeLavadoras.obtenerCantidadDeLavadoras();
-        int N2 = listaDeTelevisores.obtenerCantidadDeTelevisores();
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                int N1 = listaDeLavadoras.obtenerCantidadDeLavadoras();
+                int N2 = listaDeTelevisores.obtenerCantidadDeTelevisores();
 
-        DefaultCategoryDataset datos = new DefaultCategoryDataset();
+                DefaultCategoryDataset datos = new DefaultCategoryDataset();
 
-        datos.setValue(N1, "Electrodomestico", "Lavadoras");
-        datos.setValue(N2, "Electrodomestico", "Televisores");
+                datos.setValue(N1, "Electrodomestico", "Lavadoras");
+                datos.setValue(N2, "Electrodomestico", "Televisores");
 
-        JFreeChart grafico = ChartFactory.createBarChart(
-            "Cantidad de Electrodomesticos",
-            "Electrodomesticos",
-            "Cantidad",
-            datos,
-            PlotOrientation.VERTICAL,
-            true,
-            true,
-            false
-        );
+                JFreeChart grafico = ChartFactory.createBarChart(
+                        "Cantidad de Electrodomesticos",
+                        "Electrodomesticos",
+                        "Cantidad",
+                        datos,
+                        PlotOrientation.VERTICAL,
+                        true,
+                        true,
+                        false
+                );
 
-       
-        CategoryPlot plot = grafico.getCategoryPlot();
-        BarRenderer renderer = (BarRenderer) plot.getRenderer();
-        renderer.setSeriesPaint(0, Color.BLUE); 
-        renderer.setSeriesPaint(1, Color.RED); 
+                CategoryPlot plot = grafico.getCategoryPlot();
+                BarRenderer renderer = (BarRenderer) plot.getRenderer();
+                renderer.setSeriesPaint(0, Color.BLUE);
+                renderer.setSeriesPaint(1, Color.RED);
 
-        ChartPanel panel = new ChartPanel(grafico);
-        panel.setMouseWheelEnabled(true);
-        panel.setPreferredSize(new Dimension(1006,558));
-        Estadistica.setLayout(new BorderLayout());
-        Estadistica.add(panel, BorderLayout.NORTH);
-        Estadistica.revalidate();
-        Estadistica.repaint();
+                ChartPanel panel = new ChartPanel(grafico);
+                panel.setMouseWheelEnabled(true);
+                panel.setPreferredSize(new Dimension(1006, 558));
+
+                Estadistica.setLayout(new BorderLayout());
+                Estadistica.add(panel, BorderLayout.CENTER); // Asegúrate de usar BorderLayout.CENTER para un mejor ajuste
+                Estadistica.revalidate();
+                Estadistica.repaint();
+            }
+        });
     }
      
     @SuppressWarnings("unchecked")
