@@ -3,8 +3,9 @@ package model;
 public class Lavadora extends Electrodomestico {
 
     private int carga;
-
+//Te amooo angela
     //Constructor por defecto
+
     public Lavadora() {
         super();
         this.carga = 5;
